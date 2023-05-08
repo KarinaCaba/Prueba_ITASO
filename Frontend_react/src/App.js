@@ -10,7 +10,10 @@ import Navbar from "./components/Navbar/Navbar";
 import Home from "./pages/Home/Home";
 import Register from "./pages/Register/Register";
 import Login from "./pages/Login/Login";
-import Profiles from "./pages/Profiles";
+import Profiles from "./pages/Profiles/Profiles";
+import Ers from "./pages/Ers/Ers"
+import News from "./pages/News/News";
+import Survey from "./pages/Survey/Survey";
 
 const Layout = () => {
   return (
@@ -42,6 +45,18 @@ const router = createBrowserRouter([
       {
         path: "/login",
         element: <Login/>
+      },
+      {
+        path: "/ers",
+        element: <Ers/>
+      },
+      {
+        path: "/news",
+        element: <News/>
+      },
+      {
+        path: "/survey",
+        element: <Survey/>
       }
     ]
   },
