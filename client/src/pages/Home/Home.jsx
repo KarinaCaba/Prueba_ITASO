@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import "./Home.scss"
 import rally from "../Home/VI_Rally_Bienestar_Integral_ITASO-MX_RS_2205-1.jpg"
 import video from "../Home/ITASO_VIDEO_FINAL.mp4"
+import poster from "./vid-poster.png"
 
 const Home = () => {
   return (
@@ -34,7 +35,8 @@ const Home = () => {
           <h2 className="secondary-title">Lorem ipsum dolor sit amet consectetur</h2>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos sequi accusantium officiis doloremque neque officia temporibus at explicabo iure laboriosam fugit recusandae molestias cum quae maxime nulla, quia accusamus ab.</p>
         </div>
-        <video id="vid" className="grid-image" src={video} controls></video>
+        <video id="vid" className="grid-image" src={video} controls poster={poster}></video>
+      
       </div>
       <div className="download">
         <h2>¡Comparte tu experiencia con nosotros o haznos una pregunta!</h2>
