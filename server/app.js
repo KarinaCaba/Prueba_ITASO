@@ -2,19 +2,20 @@ require('dotenv').config({path: `${__dirname}/.env`});
 
 const express =require('express');
 const mongoose = require('mongoose');
+const bodyParser = require('body-parser');
 const cors = require('cors');
 
 const app = express();
 const port = process.env.PORT || 3000;
 
-const Router = require('./Routes/route'); 
+
 const authRoutes = require('./Routes/auth.routes');
 
 app.use(cors());
+app.use(bodyParser.json());
 app.use(express.json());
 
 app.use('/api/auth', authRoutes);
-app.use(Router);
 
 const mongostring = process.env.MONGO_URL;
 mongoose.set('strictQuery', true);
