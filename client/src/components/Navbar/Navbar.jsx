@@ -1,72 +1,111 @@
-import React, { useState } from 'react'
+//import Button from "react-bootstrap/Button";
+import Container from "react-bootstrap/Container";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
+import NavDropdown from "react-bootstrap/NavDropdown";
+import Offcanvas from "react-bootstrap/Offcanvas";
 import { Link } from "react-router-dom";
-import logo from '../Navbar/logo.png'
-import "./Navbar.scss"
+import logo from "./logo.png";
+import "./navtest.scss";
+function Navbar1() {
+	return (
+		<>
+			{["lg"].map((expand) => (
+				<Navbar
+					key={expand}
+					bg="dark"
+					variant="dark"
+					expand={expand}
+					className="mb-0 " style={{Width:"40rem"}}>
+					<Container fluid>
+						<Navbar.Brand as={Link} to={"/"}>
+							<img
+								src={logo}
+								style={{maxHeight: "2.6rem" }}
+								className="ps-3 d-inline-block align-top"
+								alt="logo itaso"></img>
+						</Navbar.Brand>
+						<Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
+						<Navbar.Offcanvas
+							id={`offcanvasNavbar-expand-${expand}`}
+							aria-labelledby={`offcanvasNavbarLabel-expand-xxl`}
+							className="bg-change"
+							placement="start">
+							<Offcanvas.Header closeButton style={{color:'#ffffff8c'}}>
+								<Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
+									<img
+										src={logo}
+										style={{  maxHeight: "2.6rem" }}
+										className="ps-0 d-inline-block align-top"
+										alt="logo itaso"></img>
+								</Offcanvas.Title>
+							</Offcanvas.Header>
+							<Offcanvas.Body>
+								<Nav className="justify-content-center flex-grow-1 ps-0">
+									<Nav.Link
+										eventkey={1}
+										as={Link}
+										to={"/profiles"}
+										className="navlink">
+										Perfiles
+									</Nav.Link>
+									<Nav.Link
+										eventkey={2}
+										as={Link}
+										to={"/ers"}
+										className="navlink">
+										Eventos, reuniones y sesiones
+									</Nav.Link>
+									<NavDropdown
+										title="Juegos"
+										id={`offcanvasNavbarDropdown-expand-${expand}`}
+                                        aria-controls="responsive-navbar-nav"
+										className="navlink">
+										<NavDropdown.Item eventkey={3} as={Link} to={"/calculator"}>
+											Calculadora
+										</NavDropdown.Item>
+										<NavDropdown.Divider />
+										<NavDropdown.Item eventkey={4} as={Link} to={"/memorama"}>
+											Memorama
+										</NavDropdown.Item>
+										<NavDropdown.Divider />
+										<NavDropdown.Item eventkey={1} as={Link} to={"/ruleta"}>
+											Ruleta
+										</NavDropdown.Item>
+									</NavDropdown>
 
-const Navbar = () => {
-  const [clicked, setClick] = useState(false)
-  return (
-    <nav className="main-nav">
-
-      <div className='img'>
-        <Link className='nav-link' to="/">
-          <img className='logo' src={logo} alt=""></img>
-        </Link>
-      </div>
-
- 
-      <ul id="nav-list" className={clicked ? "#nav-list active" : "#nav-list"}>
-        <li className="nav-item">
-          <Link className="nav-link" to="/profiles">
-            Perfiles
-          </Link>
-        </li>
-        <li className="nav-item">
-          <Link className="nav-link" to="/ers">
-            Eventos, reuniones y sesiones
-          </Link>
-        </li>
-        <li className="nav-item">
-          <Link className="nav-link" to="/games">
-            Juegos
-          </Link>
-        </li>
-        <li className="nav-item">
-          <Link className="nav-link" to="/news">
-            Noticias
-          </Link>
-        </li>
-        <li className="nav-item">
-          <Link className="nav-link" to="/survey">
-            Encuestas
-          </Link>
-        </li>
-        <li className="nav-item">
-          <Link className="nav-link" to="/about">
-            Nosotros
-          </Link>
-        </li>
-        <li className="nav-item">
-          <Link className="nav-link" to="/forum">
-            Foro
-          </Link>
-        </li>
-      </ul>
-
-      <div className="nav-items-right">
-        <Link className="btn-login" to="/login">
-          Login
-        </Link>
-        <Link className="btn-login" to="/register">
-          Register
-        </Link>
-        <div className='mobile'>
-          <i id='bars' className={clicked ? 'fas fa-times' : 'fas fa-bars'} onClick={()=>setClick(!clicked)}></i>
-        </div>
-      </div>
-
-    </nav>
-  )
+									<Nav.Link
+										eventkey={6}
+										as={Link}
+										to={"/news"}
+										className="navlink">
+										Noticias
+									</Nav.Link>
+									<Nav.Link
+										eventkey={7}
+										as={Link}
+										to={"/survey"}
+										className="navlink">
+										Encuestas
+									</Nav.Link>
+									<Nav.Link
+										eventkey={8}
+										as={Link}
+										to={"/about"}
+										className="navlink">
+										Nosotros
+									</Nav.Link>
+									<Nav.Link href="/forum" className="navlink">
+										Foro
+									</Nav.Link>
+								</Nav>
+							</Offcanvas.Body>
+						</Navbar.Offcanvas>
+					</Container>
+				</Navbar>
+			))}
+		</>
+	);
 }
 
-export default Navbar
+export default Navbar1;
