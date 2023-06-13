@@ -5,7 +5,7 @@ import {
   Outlet,
 } from "react-router-dom";
 import Footer from "./components/Footer/Footer";
-import Navbar from "./components/Navbar/Navbar";
+import Navbar1 from "./components/Navbar/Navbar";
 import Home from "./pages/Home/Home";
 import Register from "./pages/Register/Register";
 import Login from "./pages/Login/Login";
@@ -13,11 +13,12 @@ import Profiles from "./pages/Profiles/Profiles";
 import Ers from "./pages/Ers/Ers"
 import News from "./pages/News/News";
 import Survey from "./pages/Survey/Survey";
+//import About from "./pages/About/About";
 
 const Layout = () => {
   return (
     <>
-      <Navbar/>
+      <Navbar1/>
       <Outlet/>
       <Footer/>
     </>
@@ -56,7 +57,12 @@ const router = createBrowserRouter([
       {
         path: "/survey",
         element: <Survey/>
-      }
+      },
+      {
+        path: "/",
+        element: <Home/>
+      },
+
     ]
   },
 
@@ -64,7 +70,7 @@ const router = createBrowserRouter([
 
 function App() {
   return (
-    <div className="app">
+    <div>
         <RouterProvider router={router}/>
     </div>
   );
