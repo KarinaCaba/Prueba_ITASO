@@ -1,7 +1,8 @@
 @import '~bootstrap/scss/bootstrap.scss';
 
 
-
+$body-bg: #fa0000;
+$body-color: #0b12d4;
 * {
   margin: 0;
   padding: 0;
@@ -11,3 +12,6 @@
     color: inherit;
   }
 }
+
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins";

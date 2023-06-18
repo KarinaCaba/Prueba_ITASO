@@ -13,8 +13,7 @@ function Navbar1() {
 			{["lg"].map((expand) => (
 				<Navbar
 					key={expand}
-					bg="dark"
-					variant="dark"
+					bg="light"
 					expand={expand}
 					className="mb-0 " style={{Width:"40rem"}}>
 					<Container fluid>
@@ -33,11 +32,14 @@ function Navbar1() {
 							placement="start">
 							<Offcanvas.Header closeButton style={{color:'#ffffff8c'}}>
 								<Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
+									<Link to={'/'}>
+									
 									<img
 										src={logo}
 										style={{  maxHeight: "2.6rem" }}
 										className="ps-0 d-inline-block align-top"
 										alt="logo itaso"></img>
+										</Link>
 								</Offcanvas.Title>
 							</Offcanvas.Header>
 							<Offcanvas.Body>
@@ -64,11 +66,11 @@ function Navbar1() {
 										<NavDropdown.Item eventkey={3} as={Link} to={"/calculator"}>
 											Calculadora
 										</NavDropdown.Item>
-										<NavDropdown.Divider />
+										
 										<NavDropdown.Item eventkey={4} as={Link} to={"/memorama"}>
 											Memorama
 										</NavDropdown.Item>
-										<NavDropdown.Divider />
+										
 										<NavDropdown.Item eventkey={1} as={Link} to={"/ruleta"}>
 											Ruleta
 										</NavDropdown.Item>

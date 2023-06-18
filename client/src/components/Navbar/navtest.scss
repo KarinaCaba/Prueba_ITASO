@@ -1,49 +1,59 @@
+
 .navlink {
 	padding-left: 1.5rem !important;
 	padding-right: 1rem !important;
-	:hover {
-		cursor: pointer;
+
+}
+.nav-link {
+	
+	
+	font-weight: 500 !important;
+	transform: scale(1);
+	transition: transform 0.3s ease-in-out;
+
+	&:hover {
+		transform: scale(1.2);
+		color: #f0ad4e !important;
+	}
+	&:active {
+		color: #f0ad4e !important;
+	}
+	&:focus {
+		color: #f0ad4e !important;
 	}
 }
-.bg-change {
-	background-color: #212529;
-	color: #ffffff8c;
-}
 
-.btn-close {
-	filter: invert(80%);
-}
-@media (min-width: 768px) {
-    .dropdown-menu {
-        display: block;
-    border-radius: 0%;
-    opacity: 0;
-    transition:all .6s;
-    pointer-events: none ;
-    }
-    
-}
+
+
 .dropdown {
 	.dropdown-menu {
-		background-color: #212529;
-       
+		padding-top: 0 !important;
+		padding-bottom: 0 !important;
+
+	}
+	@media (min-width: 768px) {
+		.dropdown-menu {
+			display: block;
+		border-radius: 0%;
+		opacity: 0;
+		transition:all .6s;
+		pointer-events: none ;
+		}
+		&:hover {
+			.dropdown-menu {
+				display: block;
+				opacity: 1;
+				margin-top: 0;
+				pointer-events: initial;
+			}
+		}
 	}
 
 
-	.dropdown-item {
-		color: #ffffff8c;
-	}
 
 	.dropdown-item:hover {
 		background: #f0ad4e;
 	}
 	//hacemos un hover
-	&:hover {
-		.dropdown-menu {
-			display: block;
-			opacity: 1;
-			margin-top: 0;
-            pointer-events: initial;
-		}
-	}
+
 }
