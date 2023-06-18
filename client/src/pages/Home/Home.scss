@@ -8,13 +8,14 @@
     background: linear-gradient( 
     rgba(0, 0, 0, 0.4),
     rgba(0, 0, 0, 0.4)),
-    url("./background.jpg") center/cover;
+    url("./background.jpg") center/cover no-repeat;
     max-width: 100%;
-  
+    max-height: 25%;
     height: 35rem;
     display: flex;
     justify-content: center;
     text-align: center;
+
     .wrapper {
       
       color: #FFF;
@@ -58,12 +59,12 @@
   }
 
   .about {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 5.6rem;
-    max-width: 152rem;
-    gap: 8.3rem;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    // padding: 5.6rem;
+    // max-width: 152rem;
+    // gap: 8.3rem;
 
     .grid-image {
       margin-top: 2.4rem;
@@ -110,14 +111,15 @@
 
   .gallery {
     background-color: #F6F6F6;
-    padding-bottom: 2rem;
+    padding-bottom: 3rem;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    max-width: 100%;
     padding-top: 6rem;
-    max-width: 152rem;
 
     .text-group {
       text-align: center;
-      grid-column: span 4;
-      margin: 0 22rem;
+      
 
       .secondary-title {
         font-size: 3rem;
@@ -129,12 +131,6 @@
       }
     }
 
-    .grid-image {
-      display: block;
-      width: 75%;
-      grid-column: span 4;
-      margin: 2.4rem auto;
-    }
   }
 
   .download {
