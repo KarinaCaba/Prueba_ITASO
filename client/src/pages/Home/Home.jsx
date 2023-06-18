@@ -8,10 +8,10 @@ import poster from "./vid-poster.png";
 const Home = () => {
 	return (
 		<div className="home container m-0 p-0 border-0">
-			<div className="banner container pt-0 shadow-lg">
-				<div className="wrapper">
-					<div className="container pb-3  ">
-						<h1 className="title fw-bolder ">Bienvenido al proyecto ITASO</h1>
+			<div className="banner container d-flex justify-content-center shadow-lg">
+				<div className="wrapper d-flex flex-column justify-content-center">
+					<div className="container pb-3  pe-2">
+						<h1 className="title pe-2 ">Bienvenido al proyecto ITASO</h1>
 					</div>
 
 					<div className="container d-flex justify-content-center ps-3 pb-1">
@@ -22,10 +22,10 @@ const Home = () => {
 							exercitationem obcaecati quisquam, voluptatibus autem.
 						</p>
 					</div>
-					<div className="btns mt-2 container">
+					<div className="mt-2 container">
 						<div className="row">
-						<div className="col ">
-							<Link className="btn btn-info rounded-5 btn-download">
+						<div className="col btn-container">
+							<Link className="btn btn-info rounded-5 btn-download p-3 fs-5">
 								<i className="bx bx-download"></i> Descargar manual
 							</Link>
 						</div>						
@@ -36,10 +36,10 @@ const Home = () => {
 			</div>
 
 			<div className="about d-grid mb-5">
-				<div className="row mx-auto">
-					<div className="col-lg d-flex flex-column justify-content-center ">
+				<div className="row">
+					<div className="col-lg d-flex justify-content-center mx-auto ">
 						
-							<img src={rally} className="shadow-lg rounded-3" alt="rally-itaso" width={"100%"}/>
+							<img src={rally} className="shadow-lg rounded-3 text-center" alt="rally-itaso" width={"87%"}/>
 						
 					</div>
 
@@ -80,7 +80,7 @@ const Home = () => {
 						Lorem ipsum dolor sit amet consectetur
 					</h2>
 					<div className="gall-info container w-75 pb-3">
-					<p className="text-center mx-5">
+					<p className="text-justify">
 						Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos sequi
 						accusantium officiis doloremque neque officia temporibus at
 						explicabo iure laboriosam fugit recusandae molestias cum quae maxime

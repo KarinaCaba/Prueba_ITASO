@@ -1,12 +1,16 @@
 @import '~bootstrap/scss/bootstrap.scss';
-
-
+// @import url('https://fonts.googleapis.com/css2?family=Asap:wght@100&display=swap');
+@font-face {
+  font-family: 'Asap';
+  src: url(https://fonts.googleapis.com/css2?family=Asap&display=swap);
+}
 $body-bg: #fa0000;
 $body-color: #0b12d4;
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Asap',sans-serif !important;
   .link {
     text-decoration: none;
     color: inherit;
