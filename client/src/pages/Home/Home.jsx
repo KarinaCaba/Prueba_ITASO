@@ -8,10 +8,10 @@ import poster from "./vid-poster.png";
 const Home = () => {
 	return (
 		<div className="home container m-0 p-0 border-0">
-			<div className="banner container pt-5">
-				<div className="wrapper mt-5">
-					<div className="container justify-content-center ps-3">
-						<h1 className="title ">Bienvenido al proyecto ITASO</h1>
+			<div className="banner container pt-0 shadow-lg">
+				<div className="wrapper">
+					<div className="container pb-3  ">
+						<h1 className="title fw-bolder ">Bienvenido al proyecto ITASO</h1>
 					</div>
 
 					<div className="container d-flex justify-content-center ps-3 pb-1">
@@ -24,8 +24,8 @@ const Home = () => {
 					</div>
 					<div className="btns mt-2 container">
 						<div className="row">
-						<div className="col mx-auto ">
-							<Link className="btn btn-light rounded-5 btn-download">
+						<div className="col ">
+							<Link className="btn btn-info rounded-5 btn-download">
 								<i className="bx bx-download"></i> Descargar manual
 							</Link>
 						</div>						
@@ -37,21 +37,21 @@ const Home = () => {
 
 			<div className="about d-grid p-5">
 				<div className="row">
-					<div className="col-lg d-flex flex-column justify-content-center">
+					<div className="col-lg d-flex flex-column justify-content-center ">
 						
-							<img src={rally} alt="rally-itaso" width={"100%"}/>
+							<img src={rally} className="shadow-lg rounded-3" alt="rally-itaso" width={"100%"}/>
 						
 					</div>
 
 					<div className="text-group col d-grid">
-						<div className="row">
-							<h2 className="secondary-title">
+						<div className="row about-info mx-auto">
+							<h2 className="secondary-title fw-bolder">
 								Lorem ipsum dolor sit amet consectetur adipisicing elit
 							</h2>
 						</div>
 
-						<div className="row">
-							<p>
+						<div className="row about-info mx-auto ">
+							<p className="text-justify">
 								Lorem, ipsum dolor sit amet consectetur adipisicing elit.
 								Quisquam porro iusto reprehenderit deserunt eligendi tenetur
 								corrupti nisi nemo beatae cumque perferendis minima, temporibus
@@ -76,15 +76,18 @@ const Home = () => {
 			</div>
 			<div className="gallery container d-flex flex-column justify-content-center align-content-center ">
 				<div className="text-group">
-					<h2 className="secondary-title">
+					<h2 className="secondary-title fw-bolder">
 						Lorem ipsum dolor sit amet consectetur
 					</h2>
+					<div className="gall-info container w-75 pb-3">
 					<p className="text-center mx-5">
 						Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos sequi
 						accusantium officiis doloremque neque officia temporibus at
 						explicabo iure laboriosam fugit recusandae molestias cum quae maxime
 						nulla, quia accusamus ab.
 					</p>
+					</div>
+
 				</div>
 				<div className="container d-flex justify-content-center">
 					<video
@@ -92,7 +95,7 @@ const Home = () => {
 						className="grid-image"
 						src={video}
 						controls
-						width={"100%"}
+						width={"75%"}
 						poster={poster}></video>
 				</div>
 			</div>
