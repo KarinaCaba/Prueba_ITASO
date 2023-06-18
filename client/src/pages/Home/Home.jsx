@@ -35,8 +35,8 @@ const Home = () => {
 				</div>
 			</div>
 
-			<div className="about d-grid p-5">
-				<div className="row">
+			<div className="about d-grid mb-5">
+				<div className="row mx-auto">
 					<div className="col-lg d-flex flex-column justify-content-center ">
 						
 							<img src={rally} className="shadow-lg rounded-3" alt="rally-itaso" width={"100%"}/>
