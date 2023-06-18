@@ -7,10 +7,11 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import { Link } from "react-router-dom";
 import logo from "./logo.png";
-import "./navtest.scss";
+import "./Navbar.scss";
 function Navbar1() {
 	const [show, setShow] = useState(false);
-	const handleClose = () => setShow(!show);
+	const handleClose = () => setShow(false);
+	const handleShow = () => setShow(true);
 	return (
 		<>
 			{["lg"].map((expand) => (
@@ -27,7 +28,7 @@ function Navbar1() {
 								className="ps-3 d-inline-block align-top"
 								alt="logo itaso"></img>
 						</Navbar.Brand>
-						<Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} onClick={handleClose} />
+						<Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} onClick={handleShow} />
 						<Navbar.Offcanvas
 							id={`offcanvasNavbar-expand-${expand}`}
 							aria-labelledby={`offcanvasNavbarLabel-expand-xxl`}
