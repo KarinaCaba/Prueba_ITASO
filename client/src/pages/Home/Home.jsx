@@ -37,7 +37,7 @@ const Home = () => {
 			<div className="about mb-5">
 				<div className="container">
 					<div className="row">
-						<div className="col-lg d-flex flex-column justify-content-center mx-auto ">
+						<div className="col-lg d-flex flex-column justify-content-center mx-0 ">
 							<div className="ms-3">
 							<img
 								src={rally}
