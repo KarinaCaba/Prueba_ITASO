@@ -1,12 +1,7 @@
-@font-face {
-  font-family: 'Asap';
-  src: url(https://fonts.googleapis.com/css2?family=Asap&display=swap);
-}
+
 .home {
   background-color: #fff;
-  width: 100%;
-  max-width: 100%;
-  font-family: 'Asap',sans-serif !important;
+  
   .banner {
     padding-top: 6.7rem !important;
     background: linear-gradient( 
@@ -94,8 +89,8 @@
     padding-top: 3rem !important;
     .grid-image {
       margin-top: 2.4rem;
-      max-width: 60%;
-      display: block;
+      width: 60%;
+      object-fit: cover;
     }
 
     .text-group {
@@ -104,17 +99,17 @@
 
       .secondary-title {
         font-size: 2.5rem;
-      }
-      .about-info{
-        max-width: 90% !important;
-        width: 90% !important;
+        margin-right: 1rem !important;
       }
       p {
+        max-width: 90% !important;
+        width: 90% !important;
         margin-top: 2rem;
         line-height: 2.2rem;
         font-size: 1.2rem;
         text-align: justify;
         text-justify: inter-word;
+        
       }
     }
   }
@@ -148,35 +143,52 @@
     max-width: 100%;
     padding-top: 6rem;
 
+
     @media screen and (max-width: 768px) {
       padding-top: 3rem;
 
       .gall-info{
         max-width: 100% !important;
         width: 100% !important;
-        p{
-          text-align: start !important;
-          
-        }
+        justify-content: start !important;
+
       }
       .grid-image{
         max-width: 100%;
         width: 100%;
       }
+      .secondary-title{
+        text-align: start !important;
+        
+      }
+      p{
+        
+        width: 100%;
+        
+      }
+      .text-group{
+        max-width: 100% !important;
+        width: 100% !important;
+        text-align: start !important;
+      }
     
       
     }
     .text-group {
-      text-align: center;
-      
+
 
       .secondary-title {
-        font-size: 3rem;
+        font-size: 2.6rem;
       }
 
       p {
+        max-width: 90% !important;
+        width: 90% !important;
         margin-top: 2rem;
+        line-height: 2.2rem;
         font-size: 1.2rem;
+        text-align: justify;
+        text-justify: inter-word;
       }
     }
 

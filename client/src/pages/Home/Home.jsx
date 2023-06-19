@@ -7,7 +7,7 @@ import poster from "./vid-poster.png";
 
 const Home = () => {
 	return (
-		<div className="home container m-0 p-0 border-0">
+		<div className="home">
 			<div className="banner container d-flex justify-content-center shadow-lg">
 				<div className="wrapper d-flex flex-column justify-content-center">
 					<div className="container pb-3  pe-2">
@@ -24,39 +24,46 @@ const Home = () => {
 					</div>
 					<div className="mt-2 container">
 						<div className="row">
-						<div className="col btn-container">
-							<Link className="btn btn-info rounded-5 btn-download p-3 fs-5">
-								<i className="bx bx-download"></i> Descargar manual
-							</Link>
-						</div>						
+							<div className="col btn-container">
+								<Link className="btn btn-info rounded-5 btn-download p-3 fs-5">
+									<i className="bx bx-download"></i> Descargar manual
+								</Link>
+							</div>
 						</div>
-
 					</div>
 				</div>
 			</div>
 
-			<div className="about d-grid mb-5">
-				<div className="row">
-					<div className="col-lg d-flex justify-content-center mx-auto ">
-						
-							<img src={rally} className="shadow-lg rounded-3 text-center" alt="rally-itaso" width={"87%"}/>
-						
-					</div>
-
-					<div className="text-group col d-grid">
-						<div className="row about-info mx-auto">
-							<h2 className="secondary-title fw-bolder">
-								Lorem ipsum dolor sit amet consectetur adipisicing elit
-							</h2>
+			<div className="about mb-5">
+				<div className="container">
+					<div className="row">
+						<div className="col-lg d-flex flex-column justify-content-center mx-auto ">
+							<div className="ms-3">
+							<img
+								src={rally}
+								className="shadow-lg rounded-3"
+								alt="rally-itaso"
+								width={"87%"}
+							/>
+							</div>
 						</div>
 
-						<div className="row about-info mx-auto ">
-							<p className="text-justify">
-								Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-								Quisquam porro iusto reprehenderit deserunt eligendi tenetur
-								corrupti nisi nemo beatae cumque perferendis minima, temporibus
-								pariatur? Cupiditate corporis commodi quasi eveniet nesciunt?
-							</p>
+						<div className="text-group col justify-content-center ms-4">
+							<div className="about-info mx-auto">
+								<h2 className="secondary-title fw-bolder">
+									Lorem ipsum dolor sit amet consectetur adipisicing elit
+								</h2>
+							</div>
+
+							<div className="about-info ">
+								<p className="text-justify">
+									Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+									Quisquam porro iusto reprehenderit deserunt eligendi tenetur
+									corrupti nisi nemo beatae cumque perferendis minima,
+									temporibus pariatur? Cupiditate corporis commodi quasi eveniet
+									nesciunt?
+								</p>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -74,21 +81,27 @@ const Home = () => {
 						fill="currentColor"></path>
 				</svg>
 			</div>
-			<div className="gallery container d-flex flex-column justify-content-center align-content-center ">
-				<div className="text-group">
+
+			<div className="gallery container d-flex flex-column justify-content-center ">
+				<div className="justify-content-center ">
+
+				
+				<div className="text-group text-center mx-3">
 					<h2 className="secondary-title fw-bolder">
 						Lorem ipsum dolor sit amet consectetur
 					</h2>
-					<div className="gall-info container w-75 pb-3">
-					<p className="text-justify">
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos sequi
-						accusantium officiis doloremque neque officia temporibus at
-						explicabo iure laboriosam fugit recusandae molestias cum quae maxime
-						nulla, quia accusamus ab.
-					</p>
-					</div>
 
+					<div className="gall-info container d-flex justify-content-center pb-3 w-75">
+						<p className="text-justify ">
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos
+							sequi accusantium officiis doloremque neque officia temporibus at
+							explicabo iure laboriosam fugit recusandae molestias cum quae
+							maxime nulla, quia accusamus ab.
+						</p>
+					</div>
 				</div>
+				</div>
+
 				<div className="container d-flex justify-content-center">
 					<video
 						id="vid"
