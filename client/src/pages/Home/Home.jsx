@@ -91,7 +91,7 @@ const Home = () => {
 						Lorem ipsum dolor sit amet consectetur
 					</h2>
 
-					<div className="gall-info container d-flex justify-content-center pb-3 w-75">
+					<div className="gall-info d-flex justify-content-center pb-3 ">
 						<p className="text-justify ">
 							Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos
 							sequi accusantium officiis doloremque neque officia temporibus at

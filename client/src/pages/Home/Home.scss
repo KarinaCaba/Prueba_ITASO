@@ -161,15 +161,16 @@
         text-align: start !important;
         
       }
-      p{
-        
-        width: 100%;
-        
-      }
+
       .text-group{
-        max-width: 100% !important;
-        width: 100% !important;
+
         text-align: start !important;
+        p{
+        
+          max-width: 100% !important;
+          width: 100% !important;
+          
+        }
       }
     
       
@@ -182,8 +183,8 @@
       }
 
       p {
-        max-width: 90% !important;
-        width: 90% !important;
+        max-width: 75% ;
+        width: 70% ;
         margin-top: 2rem;
         line-height: 2.2rem;
         font-size: 1.2rem;
