@@ -50,15 +50,8 @@ function Navbar1() {
 								</Offcanvas.Title>
 							</Offcanvas.Header>
 							<Offcanvas.Body>
-								<Nav className="justify-content-center flex-grow-1 ps-0">
-									<Nav.Link
-										eventkey={1}
-										as={Link}
-										to={"/profiles"}
-										onClick={handleClose}
-										className="navlink">
-										Perfiles
-									</Nav.Link>
+								<Nav className="justify-content-center flex-grow-1 ps-0 nav-primary">
+
 									<Nav.Link
 										eventkey={2}
 										as={Link}
