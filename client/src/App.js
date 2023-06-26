@@ -1,26 +1,22 @@
-import "./App.scss"
-import {
-  createBrowserRouter,
-  RouterProvider,
-  Outlet,
-} from "react-router-dom";
+import "./App.scss";
+import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import Footer from "./components/Footer/Footer";
 import Navbar1 from "./components/Navbar/Navbar";
 import Home from "./pages/Home/Home";
 import Register from "./pages/Register/Register";
 import Login from "./pages/Login/Login";
 import Profiles from "./pages/Profiles/Profiles";
-import Ers from "./pages/Ers/Ers"
+import Ers from "./pages/Ers/Ers";
 import News from "./pages/News/News";
 import Survey from "./pages/Survey/Survey";
-//import About from "./pages/About/About";
+import About from "./pages/About/About";
 
 const Layout = () => {
   return (
     <>
-      <Navbar1/>
-      <Outlet/>
-      <Footer/>
+      <Navbar1 />
+      <Outlet />
+      <Footer />
     </>
   );
 };
@@ -28,46 +24,48 @@ const Layout = () => {
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Layout/>,
+    element: <Layout />,
     children: [
       {
         path: "/",
-        element: <Home/>
+        element: <Home />,
       },
       {
         path: "/profiles",
-        element: <Profiles/>
+        element: <Profiles />,
       },
       {
         path: "/register",
-        element: <Register/>,
+        element: <Register />,
       },
       {
         path: "/login",
-        element: <Login/>
+        element: <Login />,
       },
       {
         path: "/ers",
-        element: <Ers/>
+        element: <Ers />,
       },
       {
         path: "/news",
-        element: <News/>
+        element: <News />,
       },
       {
         path: "/survey",
-        element: <Survey/>
-      }
-
-    ]
+        element: <Survey />,
+      },
+      {
+        path: "/about",
+        element: <About />,
+      },
+    ],
   },
-
 ]);
 
 function App() {
   return (
     <div>
-        <RouterProvider router={router}/>
+      <RouterProvider router={router} />
     </div>
   );
 }
