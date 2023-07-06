@@ -10,6 +10,7 @@ import Ers from "./pages/Ers/Ers";
 import News from "./pages/News/News";
 import Survey from "./pages/Survey/Survey";
 import About from "./pages/About/About";
+import NotFound from "./pages/404/404";
 
 const Layout = () => {
   return (
@@ -58,8 +59,19 @@ const router = createBrowserRouter([
         path: "/about",
         element: <About />,
       },
+      {
+        path: "/test",
+        element: <Profiles />,
+
+      }
     ],
+
+
   },
+  {
+    path: "*",
+    element: <NotFound />,
+  }
 ]);
 
 function App() {
