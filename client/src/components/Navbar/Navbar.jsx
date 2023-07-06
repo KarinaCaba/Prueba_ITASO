@@ -49,8 +49,13 @@ function Navbar1() {
 										</Link>
 								</Offcanvas.Title>
 							</Offcanvas.Header>
-							<Offcanvas.Body>
-								<Nav className="justify-content-center flex-grow-1 ps-0 nav-primary">
+							<Offcanvas.Body className="justify-content-end">
+								
+
+						
+
+								
+								<Nav className="justify-content-end flex-grow-1 ps-0 nav-primary">
 
 									<Nav.Link
 										eventkey={2}
@@ -58,7 +63,7 @@ function Navbar1() {
 										to={"/ers"}
 										onClick={handleClose}
 										className="navlink">
-										Eventos, reuniones y sesiones
+										Eventos
 									</Nav.Link>
 									<NavDropdown
 										title="Juegos"
@@ -106,6 +111,25 @@ function Navbar1() {
 										Foro
 									</Nav.Link>
 								</Nav>
+				
+								<Nav className="justify-content-end flex-grow-1 ps-0 ">
+								<NavDropdown
+										title="Cuenta"
+										id={`offcanvasNavbarDropdown-expand-${expand}`}
+										align= "end" 
+                                        aria-controls="responsive-navbar-nav"
+										className="navlink me-3">
+										<NavDropdown.Item eventkey={3} as={Link} onClick={handleClose} to={"/login"}>
+											Iniciar Sesión
+										</NavDropdown.Item>
+										
+										<NavDropdown.Item eventkey={4} as={Link}  onClick={handleClose} to={"/register"}>
+											Registrarse
+										</NavDropdown.Item>
+									</NavDropdown>
+
+								</Nav>
+							
 							</Offcanvas.Body>
 						</Navbar.Offcanvas>
 					</Container>

@@ -6,25 +6,28 @@
 }
 .nav-link {
 	
+	@media (min-width: 768px) {
+		font-weight: 500 !important;
+		transform: scale(1);
+		transition: transform 0.3s ease-in-out;
 	
-	font-weight: 500 !important;
-	transform: scale(1);
-	transition: transform 0.3s ease-in-out;
+		&:hover {
+			transform: scale(1.2);
+			color: #f0ad4e !important;
+		}
+		&:active {
+			color: #f0ad4e !important;
+		}
+		&:focus {
+			color: #f0ad4e !important;
+		}
 
-	&:hover {
-		transform: scale(1.2);
-		color: #f0ad4e !important;
+		
 	}
-	&:active {
-		color: #f0ad4e !important;
-	}
-	&:focus {
-		color: #f0ad4e !important;
-	}
+
 }
-.nav-primary {
-	margin-right: 10rem !important;
-}
+
+
 
 
 .dropdown {
@@ -49,13 +52,14 @@
 				pointer-events: initial;
 			}
 		}
+		.dropdown-item:hover {
+			background: #f0ad4e;
+		}
 	}
 
 
 
-	.dropdown-item:hover {
-		background: #f0ad4e;
-	}
+
 	//hacemos un hover
 
 }
