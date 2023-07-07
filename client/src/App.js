@@ -13,6 +13,8 @@ import About from "./pages/About/About";
 import Calculator from "./pages/Calculator/Calculator";
 import Memorama from "./pages/Memorama/Memorama";
 import Ruleta from "./pages/Ruleta/Ruleta";
+import NotFound from "./pages/404/404";
+
 
 const Layout = () => {
   return (
@@ -74,7 +76,13 @@ const router = createBrowserRouter([
         element: <Ruleta />,
       }
     ],
+
+
   },
+  {
+    path: "*",
+    element: <NotFound />,
+  }
 ]);
 
 function App() {
