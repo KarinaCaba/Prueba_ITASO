@@ -5,8 +5,6 @@ import "./Register.scss";
 const Register = () => {
   return (
     <div>
-
-
     <div className="container">
 
     <div className="container mt-5 bg-primary rounded shadow w-75 mb-5">
@@ -22,16 +20,16 @@ const Register = () => {
             <div className="mb-4">
               <div className="mb-4 form-floating mx-5">
                 <input type="email" className="form-control" name="email" placeholder="Email" id="email" />
-                <label for="floatingInputValue" >Email</label>
+                <label htmlFor="floatingInputValue" >Email</label>
               </div>
 
               <div className="mb-4 form-floating mx-5">
                 <input type="password" className="form-control" name="password" placeholder="Password" id="password" />
-                <label for="password" className="form-label">Contraseña</label>
+                <label htmlFor="password" className="form-label">Contraseña</label>
               </div>
               <div className="mb-4 form-floating mx-5">
                 <input type="password" className="form-control" name="confirm-password" placeholder="Repeat Password" id="password2" />
-                <label for="confirm-password" className="form-label">Repite contraseña</label>
+                <label htmlFor="confirm-password" className="form-label">Repite contraseña</label>
               </div>
               <span id="message"></span>
               <div className="d-grid justify-content-center align-content-center">
