@@ -10,6 +10,9 @@ import Ers from "./pages/Ers/Ers";
 import News from "./pages/News/News";
 import Survey from "./pages/Survey/Survey";
 import About from "./pages/About/About";
+import Calculator from "./pages/Calculator/Calculator";
+import Memorama from "./pages/Memorama/Memorama";
+import Ruleta from "./pages/Ruleta/Ruleta";
 
 const Layout = () => {
   return (
@@ -58,6 +61,18 @@ const router = createBrowserRouter([
         path: "/about",
         element: <About />,
       },
+      {
+        path: "/calculator",
+        element: <Calculator />,
+      },
+      {
+        path: "/memorama",
+        element: <Memorama />,
+      },
+      {
+        path: "/ruleta",
+        element: <Ruleta />,
+      }
     ],
   },
 ]);
