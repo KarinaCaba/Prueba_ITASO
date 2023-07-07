@@ -31,7 +31,7 @@
 }
 
 .prueba h2,h3{
-    color: aqua;
+    color: aqua !important;
 }
 
 .burbuja{
@@ -40,7 +40,7 @@
     opacity: .3;
 
     position: absolute;
-    bottom: -150;
+    bottom: -5rem;
     
     animation: burbujas 3s linear infinite ;
 }
