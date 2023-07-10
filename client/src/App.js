@@ -11,7 +11,8 @@ import News from "./pages/News/News";
 import Survey from "./pages/Survey/Survey";
 import About from "./pages/About/About";
 import NotFound from "./pages/404/404";
-
+import Calculator from "./pages/Calculator/Calculator";
+import Contador from "./pages/Calculator/Contador/Contador";
 
 const Layout = () => {
   return (
@@ -33,33 +34,41 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: "/profiles",
+        path: "profiles",
         element: <Profiles />,
       },
       {
-        path: "/register",
+        path: "register",
         element: <Register />,
       },
       {
-        path: "/login",
+        path: "login",
         element: <Login />,
       },
       {
-        path: "/ers",
+        path: "ers",
         element: <Ers />,
       },
       {
-        path: "/news",
+        path: "news",
         element: <News />,
       },
       {
-        path: "/survey",
+        path: "survey",
         element: <Survey />,
       },
       {
-        path: "/about",
+        path: "about",
         element: <About />,
       },
+      {
+        path: "calculator",
+        element: <Calculator />,
+      },
+      {
+        path: "calculator/contador",
+        element:<Contador/>
+      }
     ],
 
 
