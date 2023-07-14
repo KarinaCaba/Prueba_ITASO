@@ -1,5 +1,5 @@
 .Calculator {
-	background-color: #f6ad7b;
+	background-color: #f6f6f6;
 	.form-data {
 		background-color: #f6f6f6;
 		width: 50%;
@@ -12,8 +12,7 @@
 	}
 	.form-floating {
 		margin-bottom: 3.5rem !important;
-		label::after{
-			
+		label::after {
 			background-color: transparent !important;
 		}
 		input {

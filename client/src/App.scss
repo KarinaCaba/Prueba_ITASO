@@ -102,6 +102,8 @@ $body-color: #0b12d4;
     color: inherit;
   }
 }
-
+html{
+  scroll-behavior: smooth;
+}
 @import "../node_modules/bootstrap/scss/variables";
 @import "../node_modules/bootstrap/scss/mixins";

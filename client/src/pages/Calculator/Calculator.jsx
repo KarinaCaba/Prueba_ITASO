@@ -62,7 +62,7 @@ const Calculator = () => {
                 </div>
 				<form className=" my-4" onSubmit={handleSubmit}>
 					<div className="py-2">
-						<div className="mb-4 form-floating mx-5">
+						<div className="mb-3 form-floating mx-5">
 							<input
 								type="number"
 								className="form-control"
@@ -83,7 +83,7 @@ const Calculator = () => {
 							) : null}
 						</div>
 
-						<div className="mb-4 form-floating mx-5">
+						<div className="mb-3 form-floating mx-5">
 							<input
 								type="number"
 								className="form-control"
@@ -104,7 +104,7 @@ const Calculator = () => {
 								</div>
 							) : null}
 						</div>
-						<div className="mb-4 form-floating mx-5">
+						<div className="mb-3 form-floating mx-5">
 							<input
 								type="number"
 								className="form-control"
