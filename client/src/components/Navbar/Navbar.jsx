@@ -6,7 +6,7 @@ import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import { Link } from "react-router-dom";
-import logo from "./logo.png";
+
 import "./Navbar.scss";
 function Navbar1() {
 	const [show, setShow] = useState(false);
@@ -19,11 +19,11 @@ function Navbar1() {
 					key={expand}
 					bg="light"
 					expand={expand}
-					className="mb-0 " style={{Width:"40rem"}}>
+					className="mb-0 navbar1 shadow " style={{Width:"40rem"}}>
 					<Container fluid>
 						<Navbar.Brand as={Link} to={"/"}>
 							<img
-								src={logo}
+								src="/assets/logo.png"
 								style={{maxHeight: "2.6rem" }}
 								className="ps-3 d-inline-block align-top"
 								alt="logo itaso"></img>
@@ -41,7 +41,7 @@ function Navbar1() {
 									onClick={handleClose}>
 									
 									<img
-										src={logo}
+										src="/assets/logo.png"
 										style={{  maxHeight: "2.6rem" }}
 										className="ps-0 d-inline-block align-top"
 										
