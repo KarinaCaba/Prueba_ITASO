@@ -119,7 +119,7 @@ const Contador = () => {
         {!next ? (
           <>
             <div className="cards mb-5 container-fluid">
-              {beverages.slice(0, edad > 18 ? 42 : 27).map((card, index) => (
+              {beverages.slice(0, edad >= 18 ? 42 : 27).map((card, index) => (
                 <Card key={index} className="shadow-md">
                   <Card.Img variant="top" src={card.imageSrc} />
                   <Card.Body>
@@ -155,7 +155,7 @@ const Contador = () => {
                 <Card className="shadow-md card-fill">
                   <Card.Img
                     variant="bottom"
-                    src="/assets/logo.png"
+                    src="/assets/logos/logo.png"
                     className="px-3 "
                   />
                 </Card>
