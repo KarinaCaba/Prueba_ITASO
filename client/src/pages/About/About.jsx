@@ -1,8 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./About.scss";
-import rally1 from "../Ers/VI_Rally_Bienestar_Integral_ITASO-MX_RS_2205-163 (1).jpg";
-import rally2 from "../Ers/VI_Rally_Bienestar_Integral_ITASO-MX_RS_2205-64.jpg";
 import { team } from "../../Data";
 
 const About = () => {
@@ -19,12 +17,20 @@ const About = () => {
               </p>
             </div>
             <div class="col-lg-5 px-5 mx-auto order-1 order-lg-2">
-              <img src={rally1} alt="" class="img-fluid mb-4 mb-lg-0" />
+              <img
+                src="/assets/rallys/VI_Rally_Bienestar_Integral_ITASO-MX_RS_2205-163 (1).jpg"
+                alt=""
+                class="img-fluid mb-4 mb-lg-0"
+              />
             </div>
           </div>
           <div class="row align-items-center">
             <div class="col-lg-5 px-5 mx-auto">
-              <img src={rally2} alt="" class="img-fluid mb-4 mb-lg-0" />
+              <img
+                src="/assets/rallys/VI_Rally_Bienestar_Integral_ITASO-MX_RS_2205-64.jpg"
+                alt=""
+                class="img-fluid mb-4 mb-lg-0"
+              />
             </div>
             <div class="col-lg-6">
               <h2 class="font-weight-light">Nuestro alcance</h2>

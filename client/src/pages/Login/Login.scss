@@ -1,14 +1,12 @@
-
-
-body{
-   background-color: white;
-   .bg_img{
-    background: url(./background.jpg);
+body {
+  background-color: white;
+  .bg_img {
+    background: url("../../../public/assets/backgrounds/background.jpg");
 
     background-repeat: no-repeat;
     background-size: cover;
-} 
-.logo-img {
+  }
+  .logo-img {
     max-width: 100%;
     display: block;
     width: 8.4rem;
