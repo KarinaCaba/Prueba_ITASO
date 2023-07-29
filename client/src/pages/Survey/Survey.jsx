@@ -1,8 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Survey.scss";
+import { useDocumentTitle } from "../../hooks/setdocumenttitle";
+
 
 const Survey = () => {
+  useDocumentTitle("Encuestas - ITASO");
   return (
     <div className="survey">
       <div className="sect-name">

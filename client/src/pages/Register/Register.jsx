@@ -1,7 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Register.scss";
+import { useDocumentTitle } from "../../hooks/setdocumenttitle";
 const Register = () => {
+  useDocumentTitle("Register - ITASO");
   return (
     <div>
       <div className="container">

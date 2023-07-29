@@ -2,8 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./About.scss";
 import { team } from "../../Data";
-
+import { useDocumentTitle } from "../../hooks/setdocumenttitle";
 const About = () => {
+  useDocumentTitle("Nosotros - ITASO");
   return (
     <div className="about">
       <div class="bg-white py-5">

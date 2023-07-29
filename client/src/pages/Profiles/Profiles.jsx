@@ -1,8 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Profiles.scss";
+import { useDocumentTitle } from "../../hooks/setdocumenttitle";
 
 const Profiles = () => {
+  useDocumentTitle("Perfiles - ITASO");
   return (
     <div className="profiles">
       <div className="sect-name">

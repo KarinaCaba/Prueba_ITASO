@@ -1,8 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Ers.scss";
+import { useDocumentTitle } from "../../hooks/setdocumenttitle";
 
 const Ers = () => {
+  useDocumentTitle("Eventos - ITASO");
   return (
     <div className="ers">
       <div className="sect-name">

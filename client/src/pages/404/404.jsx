@@ -1,8 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./404.scss";
+import { useDocumentTitle } from "../../hooks/setdocumenttitle";
 
 const NotFound = () => {
+  useDocumentTitle("404 not found - ITASO");
   return (
     <div className="NotFound">
       <section className="container-fluid pt-5">

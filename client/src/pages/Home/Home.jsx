@@ -1,8 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Home.scss";
+import { useDocumentTitle } from "../../hooks/setdocumenttitle";
 
 const Home = () => {
+  useDocumentTitle("ITASO");
   return (
     <div className="home">
       <div className="banner container d-flex justify-content-center shadow-lg">

@@ -3,8 +3,10 @@ import Carousel from "react-bootstrap/Carousel";
 import Card from "react-bootstrap/Card";
 import { carouselData, cardsData } from "../../Data";
 import "./News.scss";
+import { useDocumentTitle } from "../../hooks/setdocumenttitle";
 
 const News = () => {
+  useDocumentTitle("Noticias - ITASO");
   return (
     <div className="news">
       <Carousel className="mb-5 shadow-lg border-black border-5">

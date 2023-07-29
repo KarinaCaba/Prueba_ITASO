@@ -2,15 +2,17 @@ import React from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Calculator.scss";
+import { useDocumentTitle } from "../../hooks/setdocumenttitle";
 const Calculator = () => {
+  useDocumentTitle("Calculadora - ITASO");
   const [edad, setEdad] = useState(0);
   const [peso, setPeso] = useState(0);
   const [altura, setAltura] = useState(0);
   const [pesovalido, setPesovalido] = useState(true);
   const [alturavalida, setAlturavalida] = useState(true);
   const [edadvalida, setEdadvalida] = useState(true);
-
   const navigate = useNavigate();
+  
   const handleSubmit = (event) => {
     event.preventDefault();
     navigate("/calculator/contador", {

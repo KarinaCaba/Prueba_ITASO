@@ -63,7 +63,7 @@ function Navbar1() {
                   <Nav.Link
                     eventkey={2}
                     as={Link}
-                    to={"/ers"}
+                    to={"/Events"}
                     onClick={handleClose}
                     className="navlink"
                   >
