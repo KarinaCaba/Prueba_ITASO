@@ -19,7 +19,7 @@ function Navbar1() {
           key={expand}
           bg="light"
           expand={expand}
-          className="mb-0 navbar1 shadow "
+          className="mb-0 navbar1 shadow-sm "
           style={{ Width: "40rem" }}
         >
           <Container fluid>

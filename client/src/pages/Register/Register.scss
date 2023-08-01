@@ -11,4 +11,13 @@ body {
     display: block;
     width: 8.4rem;
   }
+  .register{
+    @media screen and (max-width: 768px) {
+      margin: 1rem 0 3rem 0 !important;
+      padding-top: 0;
+      width: 100% !important;
+      
+    }
+  
+  }
 }

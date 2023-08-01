@@ -6,10 +6,10 @@ const Login = () => {
   useDocumentTitle("Login - ITASO");
   return (
     <div>
-      <div className="container">
-        <div className="container mt-5 bg-primary rounded shadow w-75 mb-5">
+      <div className="container ">
+        <div className="container mt-5 bg-primary rounded shadow w-75 mb-5 login">
           <div className="row align-items-stretch">
-            <div className="col bg_img d-none d-lg-block col-md-5 col-lg-5 col-xl-6"></div>
+            <div className="col bg_img d-none d-lg-block col-md-5 col-lg-5 col-xl-6 "></div>
             <div className="col bg-white rounded-end p-2">
               <div className="d-flex justify-content-end">
                 <img
