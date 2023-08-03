@@ -85,7 +85,7 @@ const Contador = () => {
 			return acc + beverage.cont * beverage.sugar;
 		}, 0);
 		setResult(suma);
-		setTexto("En total consumes " + suma + " gramos de azucar");
+		setTexto("En total consumes " + suma + " gramos de azúcar");
 	};
 
 	return (
@@ -194,7 +194,7 @@ const Contador = () => {
 							{result > 25 ? (
 								<p className="h2 px-4">
 									Esto es demasiado, excedes los 25 gramos recomendados de
-									azucar al dia
+									azúcar al dia
 								</p>
 							) : (
 								<p className="h2">
