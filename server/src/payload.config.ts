@@ -1,12 +1,12 @@
-import { buildConfig } from 'payload/config';
-import path from 'path';
-import Customers from './collections/Customers';
-import Users from './collections/Users';
-import News from './collections/News';
-import Media from './collections/Media';
+import { buildConfig } from "payload/config";
+import path from "path";
+import Customers from "./collections/Customers";
+import Users from "./collections/Users";
+import News from "./collections/News";
+import Media from "./collections/Media";
 
 export default buildConfig({
-  serverURL: 'http://localhost:3003',
+  serverURL: "http://localhost:3003",
   admin: {
     user: Users.slug,
   },
@@ -20,9 +20,11 @@ export default buildConfig({
   ],
 
   typescript: {
-    outputFile: path.resolve(__dirname, 'payload-types.ts'),
+    outputFile: path.resolve(__dirname, "payload-types.ts"),
   },
   graphQL: {
-    schemaOutputFile: path.resolve(__dirname, 'generated-schema.graphql'),
+    schemaOutputFile: path.resolve(__dirname, "generated-schema.graphql"),
   },
-})
+
+  cors: "*",
+});
