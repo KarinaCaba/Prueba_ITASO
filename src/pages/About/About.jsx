@@ -3,6 +3,10 @@ import { Link } from "react-router-dom";
 import "./About.scss";
 import { team } from "../../Data";
 import { useDocumentTitle } from "../../hooks/setdocumenttitle";
+import Carousel from "react-bootstrap/Carousel";
+import Card from "react-bootstrap/Card";
+import { carouselData } from "../../Data";
+
 const About = () => {
   useDocumentTitle("Nosotros - ITASO");
   return (
@@ -52,46 +56,50 @@ const About = () => {
             </div>
           </div>
 
+          <Carousel className="mb-5 shadow-lg border-black border-5">
+        {carouselData.map((slide, index) => (
+          <Carousel.Item key={index}>
           <div class="row text-center">
             {team.map((member) => (
-              <div class="col-xl-3 col-sm-6 mb-5">
+              <div class="col-xl-6 col-sm-6 mb-5">
                 <div class="bg-white rounded shadow-sm py-5 px-4">
                   <img
                     src={member.img}
                     alt=""
                     width="100"
-                    class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm"
+                    
                   />
                   <h5 class="mb-0">{member.name}</h5>
                   <span class="small text-uppercase text-muted">
                     {member.role}
                   </span>
+                  <br/>
+                  <span class="small text-uppercase text-muted">
+                    {member.carrera}
+                  </span>
+                  <br/>
+                  <span class="small text-uppercase text-muted">
+                    {member.frase}
+                  </span>
+                  <br/>
+                  <span class="small text-uppercase text-muted">
+                    {member.experiencia}
+                  </span>
+                  <br/>
                   <ul class="social mb-0 list-inline mt-3">
-                    <li class="list-inline-item">
-                      <Link className="social-link">
-                        <i class="bx bxl-facebook-square"></i>
-                      </Link>
-                    </li>
-                    <li class="list-inline-item">
-                      <Link className="social-link">
-                        <i class="bx bxl-twitter"></i>
-                      </Link>
-                    </li>
-                    <li class="list-inline-item">
-                      <Link className="social-link">
-                        <i class="bx bxl-instagram"></i>
-                      </Link>
-                    </li>
-                    <li class="list-inline-item">
-                      <Link className="social-link">
-                        <i class="bx bxl-linkedin"></i>
-                      </Link>
-                    </li>
+
                   </ul>
                 </div>
               </div>
             ))}
           </div>
+          <Carousel.Caption>
+              <h3>{slide.title}</h3>
+              <p>{slide.description}</p>
+            </Carousel.Caption>
+          </Carousel.Item>
+        ))}
+      </Carousel>
         </div>
       </div>
 
