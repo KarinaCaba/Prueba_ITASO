@@ -4,16 +4,20 @@
   .banner {
     padding-top: 6.7rem !important;
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-      url("../../../public/assets/backgrounds/background.jpg") center/cover
+      url("../../../public/assets/backgrounds/background.png") center/cover
         no-repeat;
     max-width: 100%;
-    height: 30rem;
+    height: 25rem;
+    background-size: cover;
+    background-position: center;
     display: flex;
     justify-content: center;
+    padding: 0;
+    margin: 0;
     text-align: center;
     @media screen and (max-width: 768px) {
       padding-top: 7rem !important;
-      min-height: 47rem;
+      min-height: 50rem;
     }
 
     .wrapper {

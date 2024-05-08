@@ -112,8 +112,9 @@ const About = () => {
                                {/* Comprobación de la existencia de datos para la diapositiva actual */}
             {carouselData[groupIndex] && (
                 <Carousel.Caption>
-                    <h3>{carouselData[groupIndex].title}</h3>
-                    <p>{carouselData[groupIndex].description}</p>
+                   
+                  {/*  /* <h3>{carouselData[groupIndex].title}</h3>
+                    <p>{carouselData[groupIndex].description}</p>* */}
                 </Carousel.Caption>
             )}
                             </Carousel.Item>
