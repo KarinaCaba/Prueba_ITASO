@@ -2,35 +2,32 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Home.scss";
 import { useDocumentTitle } from "../../hooks/setdocumenttitle";
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+
 
 const Home = () => {
   useDocumentTitle("ITASO");
+
   return (
     <div className="home">
-      <div className="banner container d-flex justify-content-center shadow-lg">
-        <div className="wrapper d-flex flex-column justify-content-center">
-          <div className="container pb-3  pe-2">
-            <h1 className="title pe-2 ">Bienvenido al proyecto ITASO</h1>
-          </div>
-
-          <div className="container d-flex justify-content-center ps-3 pb-1">
-            <p className="hero-description mt-2 p-0">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi,
-              voluptatum nemo pariatur animi provident, corrupti, ipsam cum
-              dignissimos omnis expedita quam odit? Sint doloremque distinctio
-              exercitationem obcaecati quisquam, voluptatibus autem.
-            </p>
-          </div>
-          <div className="mt-2 container">
-            <div className="row">
-              <div className="col btn-container">
-                <Link className="btn btn-info rounded-5 btn-download p-3 fs-5">
-                  <i className="bx bx-download"></i> Descargar manual
-                </Link>
-              </div>
-            </div>
-          </div>
+      <div id="carouselExampleControls" className="carousel slide" data-bs-ride="carousel">
+        <div className="carousel-inner">
+        <div className="carousel-item active">
+  <img src="/assets/backgrounds/background.png" className="d-block w-100 img-fluid" alt="background" />
+</div>
+<div className="carousel-item">
+  <img src="/assets/rallys/VI_Rally_Bienestar_Integral_ITASO-MX_RS_2205-1.jpg" className="d-block w-100 img-fluid" alt="rally-itaso" />
+</div>
         </div>
+        <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+          <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span className="visually-hidden">Previous</span>
+        </button>
+        <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+          <span className="carousel-control-next-icon" aria-hidden="true"></span>
+          <span className="visually-hidden">Next</span>
+        </button>
       </div>
 
       <div className="about mb-5">
@@ -50,23 +47,20 @@ const Home = () => {
             <div className="text-group col justify-content-center ms-4">
               <div className="about-info mx-auto">
                 <h2 className="secondary-title fw-bolder">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit
+                  Misión
                 </h2>
               </div>
 
               <div className="about-info ">
                 <p className="text-justify">
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                  Quisquam porro iusto reprehenderit deserunt eligendi tenetur
-                  corrupti nisi nemo beatae cumque perferendis minima,
-                  temporibus pariatur? Cupiditate corporis commodi quasi eveniet
-                  nesciunt?
+                  La misión de ITASO es educar y empoderar a los niños en edad escolar sobre la importancia de una nutrición equilibrada y un sueño adecuado. A través de programas educativos interactivos y recursos innovadores, trabajamos en colaboración con escuelas y comunidades para proporcionar conocimientos prácticos y estrategias que fomenten el bienestar físico y mental de los niños. Nuestro objetivo es inspirar hábitos saludables que perduren toda la vida, creando así generaciones futuras más saludables.
                 </p>
               </div>
             </div>
           </div>
         </div>
       </div>
+
       <div>
         <svg
           className="wave"
@@ -87,15 +81,12 @@ const Home = () => {
         <div className="justify-content-center ">
           <div className="text-group text-center mx-3">
             <h2 className="secondary-title fw-bolder">
-              Lorem ipsum dolor sit amet consectetur
+              Visión
             </h2>
 
             <div className="gall-info d-flex justify-content-center pb-3 ">
               <p className="text-justify ">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos
-                sequi accusantium officiis doloremque neque officia temporibus
-                at explicabo iure laboriosam fugit recusandae molestias cum quae
-                maxime nulla, quia accusamus ab.
+                En ITASO, visualizamos un futuro en el que cada niño tenga acceso a la información y las herramientas necesarias para adoptar hábitos de alimentación y sueño saludables. Creemos en un mundo donde los niños crezcan fuertes, saludables y felices, capacitados para alcanzar todo su potencial.
               </p>
             </div>
           </div>
