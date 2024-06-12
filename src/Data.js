@@ -1,6 +1,6 @@
 export const team = [
   {
-    img: "/assets/equipo/Bernal.jpg",
+    img: "/assets/equipo/nicolas.jpg",
     name: "Nicolás Bernal Benítez",
     role: "Nico",
     carrera: "Ingeniería Cibernética",
@@ -8,7 +8,7 @@ export const team = [
     experiencia:"Excelente",
   },
   {
-    img: "/assets/equipo/Arredondo.png",
+    img: "/assets/equipo/michelle.jpg",
     name: "Michelle Arredondo",
     role: "Mich",
     carrera: "Diseño Gráfico y Digital",
@@ -16,7 +16,7 @@ export const team = [
     experiencia:"Mucho apoyo de todos",
   },
   {
-    img: "/assets/equipo/Avila.jpg",
+    img: "/assets/equipo/brenda.jpg",
     name: "Brenda Ávila Jiménez",
     role: "Bren",
     carrera: "Diseño Gráfico y Digital",
@@ -24,7 +24,7 @@ export const team = [
     experiencia:"Es muy tranquilo y el trabajo que hacemos es imprescindible para tener los resultados que generamos ",
   },
   {
-    img: "/assets/equipo/Piña.png",
+    img: "/assets/equipo/rafael.jpg",
     name: "Rafael Piña",
     role: "Rafa",
     carrera: "Diseño Gráfico y Digital",
@@ -32,7 +32,7 @@ export const team = [
     experiencia:"Me facino, trabaej mucho",
   },
   {
-    img: "/assets/equipo/Gaspar.png",
+    img: "/assets/equipo/maria.jpg",
     name: "María José Gaspar",
     role: "Majo",
     carrera: "Diseño Gráfico y Digital",
@@ -40,7 +40,7 @@ export const team = [
     experiencia:"Maravillosa",
   },
   {
-    img: "/assets/equipo/Reyes.png",
+    img: "/assets/equipo/ariadna.jpg",
     name: "Ariadna Reyes Alvarado",
     role: "Ari",
     carrera: "Diseño de Productos",
@@ -48,7 +48,7 @@ export const team = [
     experiencia:"Aprender más sobre un diseño colaborativo con otras carreras, las retroalimentaciones y tener satisfacción de lo que se hace para una buena causa, como lo es ITASO",
   },
   {
-    img: "/assets/equipo/Davila.png",
+    img: "/assets/equipo/bruno.jpg",
     name: "Bruno Dávila Reyes",
     role: "Brune",
     carrera: "diseño de Productos",
@@ -56,7 +56,7 @@ export const team = [
     experiencia:"Aprender y hacer amigos.",
   },
   {
-    img: "/assets/equipo/Galnares.png",
+    img: "/assets/equipo/diego.jpg",
     name: "Diego Galnares Llaca",
     role: "Galna",
     carrera: "Ciencias de la comunicación",
@@ -64,7 +64,7 @@ export const team = [
     experiencia:"Poder crecer profesionalmente, usar lo que ya he aprendido, y aprender cosas nuevas para mejorar.",
   },
   {
-    img: "/assets/equipo/Esquivel.png",
+    img: "/assets/equipo/emilio.jpg",
     name: "Emilio Esquivel Vargas",
     role: "Manchego",
     carrera: "Ciencias de la comunicación",
@@ -72,7 +72,7 @@ export const team = [
     experiencia:"Espero poder adquirir herramientas adicionales que puedan complementar mis estudios y formación humanista para ayudar a las personas",
   },
   {
-    img: "/assets/equipo/Caballero.png",
+    img: "/assets/equipo/karina.jpg",
     name: "Karina Caballeros Angeles",
     role: "Caba",
     carrera: "Ingeniería Cibernética",
@@ -80,7 +80,7 @@ export const team = [
     experiencia:"Aprender del proyecto y poder ver el impacto del proyecto",
   },
   {
-    img: "/assets/equipo/Prado.png",
+    img: "/assets/equipo/julio.jpg",
     name: "Julio Prado",
     role: "Julián",
     carrera: "Ingeniería Cibernética",
@@ -88,7 +88,7 @@ export const team = [
     experiencia:"Mucho conocimiento sobre temas medicos como la nutricion y la higiene de sueño, ademas del entendimiento de equipos tansversales para llegar a un solo objetivo. Las redes neruonales aplicadas a la medicina para la deteccion de padecimientos de manera temprana",
   },
   {
-    img: "/assets/equipo/Carracedo.png",
+    img: "/assets/equipo/ana sofia.jpg",
     name: "Ana Sofía Carracedo",
     role: "Chofis",
     carrera: "Diseño gráfico y Digital",
@@ -96,7 +96,7 @@ export const team = [
     experiencia:"Que sea una oportunidad para impactar positivamente en la comunidad y aprender de experiencias enriquecedoras",
   },
   {
-    img: "/assets/equipo/HernandezVa.png",
+    img: "/assets/equipo/victoria.jpg",
     name: "Victoria Hernández Varela",
     role: "Vicho",
     carrera: "Diseño Gráfico y Digital",
@@ -104,7 +104,7 @@ export const team = [
     experiencia:"Mi experiencia en ITASO fue muy agradable, los profesionales con los que pude convivir fueron muy amables y me da mucha alegría lo que busca el proyecto y que haya personas preocupadas por situaciones cómo estás.",
   },
   {
-    img: "/assets/equipo/HernandezMa.png",
+    img: "/assets/equipo/eduardo.jpg",
     name: "Eduardo Hernández Martinez",
     role: "Edu",
     carrera: "Diseño Gráfico y digital",
@@ -112,7 +112,7 @@ export const team = [
     experiencia:"Que sea una experiencia positiva en mi carrera profesional",
   },
   {
-    img: "/assets/equipo/Granados.png",
+    img: "/assets/equipo/martin.jpg",
     name: "Martín Granados",
     role: "Martín",
     carrera: "Ingeniería cibernética",
@@ -120,7 +120,7 @@ export const team = [
     experiencia:"Fue una experieccia muy buena ya que pude crear herramientas para ayudar a los demas al mismo tiempo que apredí cosas que creia saber",
   },
   {
-    img: "/assets/equipo/Blanco.png",
+    img: "/assets/equipo/luis.jpg",
     name: "Luis Blanco",
     role: "Blanco",
     carrera: "Ingeniería Cibernética",
@@ -128,7 +128,7 @@ export const team = [
     experiencia:"Estuvo padre la experiencia ya que pude reforzar mis conocimientos de desarrollo web y dando mejor estructura a los archivos.",
   },
   {
-    img: "/assets/equipo/Azamar.png",
+    img: "/assets/equipo/sebastian.jpg",
     name: "Sebastián Azamar",
     role: "Sebas",
     carrera: "Ingeniería Cibernética",
