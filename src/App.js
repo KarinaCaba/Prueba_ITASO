@@ -13,6 +13,8 @@ import About from "./pages/About/About";
 import NotFound from "./pages/404/404";
 import Calculator from "./pages/Calculator/Calculator";
 import Contador from "./pages/Calculator/Contador/Contador";
+import Memorama from "./pages/Memorama/Memorama"
+import Ruleta from "./pages/Ruleta/Ruleta"
 
 const Layout = () => {
   return (
@@ -68,7 +70,14 @@ const router = createBrowserRouter([
       {
         path: "calculator/contador",
         element:<Contador/>
-      }
+      },
+      {
+        path: "memorama",
+        element: <Memorama/>,
+      }, {
+        path: "ruleta",
+        element: <Ruleta/>,
+      },
     ],
 
 
