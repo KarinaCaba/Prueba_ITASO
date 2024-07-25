@@ -7,7 +7,7 @@ const Memorama = () => {
   const [icons, setIcons] = useState([]);
   const [selections, setSelections] = useState([]);
   const [board, setBoard] = useState([]);
-  const cardCount = 20; // Adjust the card count to match levels
+  const cardCount = 20; 
     
   useEffect(() => {
     loadIcons();
@@ -57,10 +57,10 @@ const Memorama = () => {
     } else if (level === 'l2') {
       nums = [0, 1, 4, 6, 8, 9, 10, 15, 18, 20, 21, 22, 25, 26];
     } else {
-      nums = [...Array(27).keys()]; // 0 to 26
+      nums = [...Array(27).keys()]; 
     }
 
-    const shuffledNums = shuffle(nums.concat(nums)); // Create pairs
+    const shuffledNums = shuffle(nums.concat(nums)); 
     const newBoard = shuffledNums.map((num, index) => ({
       id: index + 1,
       iconIndex: num,
@@ -86,7 +86,7 @@ const Memorama = () => {
   const selectCard = (cardId) => {
     const selectedCard = board.find(card => card.id === cardId);
     if (selectedCard.flipped || selectedCard.matched || selections.length === 2) {
-      return; // Ignore if the card is already flipped or matched or if two cards are already selected
+      return;
     }
 
     setBoard(prevBoard =>
@@ -99,24 +99,24 @@ const Memorama = () => {
 
   return (
     <div>
-      <div className="board"> {/* Ensure this class matches your CSS for styling */}
+      <div className="board"> 
         {board.map(card => (
           <div
-            className="card" // This should match the CSS class for cards
+            className="card" 
             key={card.id}
             onClick={() => selectCard(card.id)}
             style={{ transform: card.flipped ? 'rotateY(180deg)' : 'rotateY(0deg)' }}
           >
-            <div className="side rear" id={`rear${card.id}`}> {/* Classes for styling the card faces */}
+            <div className="side rear" id={`rear${card.id}`}> 
               {card.flipped || card.matched ? icons[card.iconIndex] : null}
             </div>
-            <div className="side front"> {/* Make sure these classes are defined in your CSS */}
+            <div className="side front"> 
               <img src="/assets/memorama/cartas/REVERSO.png" alt="card back" />
             </div>
           </div>
         ))}
       </div>
-      <div className="flex-container"> {/* This container should have CSS for layout */}
+      <div className="flex-container">
         <div className="newgame-button" onClick={() => generateBoard('l1')}>Nivel 1</div>
         <div className="newgame-button" onClick={() => generateBoard('l2')}>Nivel 2</div>
         <div className="newgame-button" onClick={() => generateBoard('l3')}>Nivel 3</div>
