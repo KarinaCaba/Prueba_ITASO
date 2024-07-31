@@ -1,8 +1,10 @@
 import React from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "./Calculator.scss";
 import { useDocumentTitle } from "../../hooks/setdocumenttitle";
+
+import "./Calculator.scss";
+
 const Calculator = () => {
   useDocumentTitle("Calculadora - ITASO");
   const [edad, setEdad] = useState(0);
@@ -60,7 +62,7 @@ const Calculator = () => {
           <h1 className="text-center">Calculadora de azúcar</h1>
         </div>
         <div className="mt-4">
-          <h2 className="text-center">Ingresa tu información</h2>
+          <h3 className="text-center">Ingresa tu información</h3>
         </div>
         <form className=" my-4" onSubmit={handleSubmit}>
           <div className="py-2">

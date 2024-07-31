@@ -1,4 +1,4 @@
-.contador {
+/*.contador {
 	padding-top: 3em;
 	text-align: center;
 	display: flex;
@@ -54,43 +54,141 @@
 		}
 	}
 
-	.result {
-		.cuchara {
-			width: 90%;
+*/
+
+.contador {
+	padding-top: 3em;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+  
+	.display {
+	  background-color: #f6f6f6;
+	  margin: 0rem 10rem !important;
+  
+	  @media screen and (max-width: 768px) {
+		padding: 0rem 0rem 3rem 0rem !important;
+		margin: 0rem !important;
+		border-radius: 0 0 0.5% 0.5% !important;
+  
+		.cards {
+		  gap: 1.2rem !important;
+		  justify-content: center !important;
+		}
+	  }
+  
+	  .cards {
+		display: flex !important;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 1.5rem;
+		background-color: transparent important;
+  
+		.card-fill {
+		  display: none !important;
+  
+		  img {
+			padding-top: 6rem;
+		  }
+  
+		  @media screen and (max-width: 767px) {
+			display: block !important;
+		  }
+		}
+  
+		.card {
+		  border: 0;
+		  background: #f6f6f6;
+		  flex: 0 0 11rem;
+  
+		  @media screen and (max-width: 600px) {
+			flex: 9rem;
+		  }
+  
+		  img {
+			width: 100%;
 			height: 15rem;
 			object-fit: scale-down;
 			background-color: transparent important;
-		}
-		.text-result {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			height: 10rem;
-			width: 80%;
-			font-size: 2rem;
-			&.blink {
-				animation-name: blinker;
-				animation-duration: 1.8s;
-				animation-timing-function: linear;
-				animation-iteration-count: infinite;
+		  }
+  
+		  .btn-group {
+			background-color: transparent important;
+			display: flex !important;
+			justify-content: center !important;
+			align-self: center !important;
+  
+			button {
+			  width: 2.5rem;
+			  height: 2.5rem;
+			  border: none;
+			  font-size: 1.2rem;
+			  margin: 0.2rem;
+  
+			  &:nth-child(1) {
+				background-color: #00bfff; // Azul para el botón de sumar
+			  }
+  
+			  &:nth-child(2) {
+				background-color: #ff6347; // Rojo para el botón de restar
+			  }
+  
+			  &:nth-child(3) {
+				background-color: #ffeb3b; // Amarillo para el botón de resetear
+			  }
+  
+			  i {
+				color: #fff;
+			  }
 			}
+		  }
 		}
+	  }
 	}
-}
-@keyframes blinker {
-	0% {
-		opacity: 1;
+  
+  
+
+	/*A partir de aquí es el resultado */
+	.result {
+		/*Aún no se quita la cuchara*/
+		.cuchara {
+		  width: 90%;
+		  height: 15rem;
+		  object-fit: scale-down;
+		  background-color: transparent !important;
+		}
+
+		.text-result {
+		  display: flex;
+		  justify-content: center;
+		  align-items: center;
+		  height: auto;
+		  width: 80%;
+		  font-size: 2rem;
+		  margin: 0 auto;
+		  text-align: center;
+		}
+		.sugar-result {
+		  font-size: 9rem;
+		  color: #00bfff; // Color azul para el número de gramos
+		}
+		.sugar-text {
+			font-size: 6rem;
+			color: #00bfff; // Color azul para gramos
+			margin-top: -90px;
+			margin-left: 10px;
+		}
+
+		
+
+		.healthy-message {
+		  color: #f6f6f6;
+		  background-color: #80cfa6; // Fondo verde para mensaje
+		  border-radius: 0.5rem;
+		  padding: 1rem;
+		  margin-top: 2rem;
+		  font-size: 1.5rem;
+		  display: inline-block; // Ajustar al tamaño del texto
+		}
+	  }
 	}
-    25%{
-        opacity: 0.5;
-    }
-	50% {
-		opacity: 0;
-	}
-    75%{
-        opacity: 0.5;
-    }
-	100% {
-		opacity: 1;
-	}
-}
