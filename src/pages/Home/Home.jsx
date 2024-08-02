@@ -53,7 +53,10 @@ const Home = () => {
 
               <div className="about-info ">
                 <p className="text-justify">
-                  La misión de ITASO es educar y empoderar a los niños en edad escolar sobre la importancia de una nutrición equilibrada y un sueño adecuado. A través de programas educativos interactivos y recursos innovadores, trabajamos en colaboración con escuelas y comunidades para proporcionar conocimientos prácticos y estrategias que fomenten el bienestar físico y mental de los niños. Nuestro objetivo es inspirar hábitos saludables que perduren toda la vida, creando así generaciones futuras más saludables.
+                La misión de ITASO-MX es prevenir la obesidad infantil mediante intervenciones interdisciplinarias, integrales, basadas en evidencia, dirigidas al contexto escolar de la educación básica en México. Nos comprometemos a diseñar e implementar programas educativos que promuevan estilos de vida saludables, fomentar la colaboración interdisciplinaria, capacitar a educadores, promover la Investigación y la innovación, sensibilizar y educar a la comunidad sobre la importancia de prevenir la obesidad infantil.                  
+                </p>
+                <p className="text-justify">
+                Nuestro propósito es crear un impacto positivo y duradero en la salud de los niños mexicanos, brindándoles las herramientas y el conocimiento necesario para llevar una vida saludable y plena. A través de una colaboración comprometida y una implementación estratégica, aspiramos a reducir la prevalencia de la obesidad infantil y mejorar la calidad de vida de las futuras generaciones.
                 </p>
               </div>
             </div>
@@ -84,9 +87,12 @@ const Home = () => {
               Visión
             </h2>
 
-            <div className="gall-info d-flex justify-content-center pb-3 ">
-              <p className="text-justify ">
-                En ITASO, visualizamos un futuro en el que cada niño tenga acceso a la información y las herramientas necesarias para adoptar hábitos de alimentación y sueño saludables. Creemos en un mundo donde los niños crezcan fuertes, saludables y felices, capacitados para alcanzar todo su potencial.
+            <div className="gall-info d-flex flex-column align-items-center pb-3">
+              <p className="mb-3">
+              El proyecto ITASO-MX busca ser un referente nacional e internacional en la prevención de la obesidad infantil mediante un enfoque interdisciplinario y basado en evidencia científica. Nuestro objetivo es crear un entorno escolar en la educación básica donde los niños, niñas y adolescentes adopten estilos de vida saludables que perduren a lo largo de su vida. 
+              </p>
+              <p className="mb-3">
+              Queremos lograr una comunidad educativa informada y comprometida con la salud integral de sus estudiantes. A través de intervenciones innovadoras, colaborativas y adaptadas al contexto socio-cultural de cada región, aspiramos a reducir significativamente la prevalencia de la obesidad infantil en México. 
               </p>
             </div>
           </div>
