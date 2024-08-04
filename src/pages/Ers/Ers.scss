@@ -1,6 +1,3 @@
-
-
-
 html, body {
   height: 100%;
   margin: 0;
@@ -20,12 +17,12 @@ html, body {
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center; 
+  justify-content: center;
 }
 
 .footer {
   height: 100px; /* Ajusta según sea necesario */
-  
+  background-color: #f8f9fa; /* Color de fondo del footer */
   text-align: center;
   padding: 20px;
   position: relative;
@@ -33,6 +30,7 @@ html, body {
   bottom: 0;
 }
 
+/* Resto de tu SCSS */
 
 .ers {
   .sect-name {
@@ -50,16 +48,24 @@ html, body {
     display: flex;
     flex-wrap: wrap;
     gap: 1.5rem;
-    padding: 4rem 12rem;
+    padding: 2rem 1rem; /* Ajuste de padding para dispositivos móviles */
     max-width: 100%;
     margin: 0 auto;
 
     .grid-item {
-      flex: 1 1 calc(33.333% - 1.5rem);
+      flex: 1 1 calc(100% - 1.5rem); /* Mostrar una columna en dispositivos móviles */
       display: flex;
       flex-direction: column;
       align-items: center;
       margin-top: 2.4rem;
+
+      @media (min-width: 768px) {
+        flex: 1 1 calc(50% - 1.5rem); /* Mostrar dos columnas en pantallas medianas */
+      }
+
+      @media (min-width: 1024px) {
+        flex: 1 1 calc(33.333% - 1.5rem); /* Mostrar tres columnas en pantallas grandes */
+      }
     }
 
     .grid-image {
@@ -103,7 +109,7 @@ html, body {
       padding: 4rem;
 
       .grid-item {
-        flex: 1 1 calc(25% - 1.5rem);
+        flex: 1 1 calc(33.333% - 1.5rem); /* Tres columnas en pantallas grandes */
       }
     }
   }
