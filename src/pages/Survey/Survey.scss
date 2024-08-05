@@ -1,4 +1,130 @@
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 .survey {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .sect-name {
+    margin-top: 2.4rem;
+    text-align: center;
+    color: #69BFDC;
+
+    .primary-title {
+      font-size: 6.9rem;
+      line-height: 100%;
+    }
+  }
+
+  .row.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding: 2rem 1rem; /* Ajuste de padding para dispositivos móviles */
+    max-width: 100%;
+    margin: 0 auto;
+
+    .grid-item {
+      flex: 1 1 calc(100% - 1.5rem); /* Mostrar una columna en dispositivos móviles */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 2.4rem;
+
+      @media (min-width: 768px) {
+        flex: 1 1 calc(50% - 1.5rem); /* Mostrar dos columnas en pantallas medianas */
+      }
+
+      @media (min-width: 1024px) {
+        flex: 1 1 calc(33.333% - 1.5rem); /* Mostrar tres columnas en pantallas grandes */
+      }
+    }
+
+    .grid-image {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 1rem;
+    }
+
+    .btn-profile {
+      text-decoration: none;
+      margin-top: 1rem;
+      background-color: #69BFDC;
+      color: #FFF;
+      transition: background-color .5s;
+      padding: 1rem 3.2rem;
+      border-radius: 1rem;
+      text-align: center;
+      font-size: 1.2rem;
+    }
+  }
+}
+
+.footer {
+  height: 100px; /* Ajusta según sea necesario */
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  width: 100%;
+  bottom: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .survey {
+    .sect-name {
+      .primary-title {
+        font-size: 7.2rem;
+      }
+    }
+
+    .row.container {
+      padding: 4rem;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .survey {
+    .row.container {
+      padding: 4rem;
+
+      .grid-item {
+        flex: 1 1 calc(25% - 1.5rem);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .survey {
+    .sect-name {
+      .primary-title {
+        font-size: 3.5rem; /* Ajuste el tamaño de la fuente para pantallas pequeñas */
+        line-height: 1.2;
+        padding: 0 1rem; /* Añade padding para evitar que el texto se corte */
+      }
+    }
+  }
+}
+
+
+/* Primera versión scss.survey {
   .sect-name {
     margin-top: 2.4rem;
     text-align: center;
@@ -104,3 +230,5 @@
     }
   }
 }
+*/
+
