@@ -109,12 +109,23 @@ html, body {
       padding: 4rem;
 
       .grid-item {
-        flex: 1 1 calc(33.333% - 1.5rem); /* Tres columnas en pantallas grandes */
+        flex: 1 1 calc(25% - 1.5rem);
       }
     }
   }
 }
 
+@media screen and (max-width: 767px) {
+  .ers {
+    .sect-name {
+      .primary-title {
+        font-size: 3.5rem; /* Ajuste el tamaño de la fuente para pantallas pequeñas */
+        line-height: 1.2;
+        padding: 0 1rem; /* Añade padding para evitar que el texto se corte */
+      }
+    }
+  }
+}
 
 
 /* primera versión scss
