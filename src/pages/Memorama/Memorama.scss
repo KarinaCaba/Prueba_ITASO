@@ -45,9 +45,10 @@ body {
 
 .rear {
   transform: rotateY(180deg); 
+}
 
 .card.flipped {
-  transform: rotateY(180deg);
+  transform: rotateY(180deg); 
 }
 
 
@@ -116,4 +117,3 @@ body {
   padding: 40px 0;
 }
 
-}

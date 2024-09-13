@@ -29,7 +29,7 @@
     }
   
     .draggable {
-      width: 60px; /* Adjust size as needed */
+      width: 60px; 
       height: 60px;
       background-size: cover;
       background-position: center;
@@ -43,7 +43,7 @@
   
     @media (max-width: 768px) {
       .draggable {
-        width: 50px; /* Adjust size for smaller screens */
+        width: 50px; 
         height: 50px;
       }
   
@@ -71,4 +71,6 @@
       }
     }
   }
+
+  
   

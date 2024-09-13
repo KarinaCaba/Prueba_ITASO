@@ -123,7 +123,6 @@ function Ruleta() {
                         <div id="acite" className="draggable float" foodGroup="Leguminosas" draggable="true" onDragStart={(e) => handleDragStart(e, 'acite')} style={{ backgroundImage: `url(/assets/Ruleta/leguminosas/aceite.png)` }}></div>
                     <div id="legumbres" className="draggable float" foodGroup="Leguminosas" draggable="true" onDragStart={(e) => handleDragStart(e, 'legumbres')} style={{ backgroundImage: `url(/assets/Ruleta/leguminosas/legumbres.png)` }}></div>
                     <div id="carne" className="draggable" foodGroup="Alimentos de Origen Animal" draggable="true" onDragStart={(e) => handleDragStart(e, 'carne')} style={{ backgroundImage: `url(/assets/Ruleta/alimentosdeorigenanimal/carne.png)` }}></div>
-                        {/* Add other draggable items similarly */}
                     </div>
                     </div>
                     <div id="target-ruleta-container" className="col-12 col-md-4 text-center" 
