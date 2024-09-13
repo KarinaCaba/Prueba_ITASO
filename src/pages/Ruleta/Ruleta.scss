@@ -25,7 +25,7 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 10px;
+      gap: 5px;
     }
   
     .draggable {
@@ -36,7 +36,6 @@
     }
   
     #target-ruleta-container {
-      display: flex;
       justify-content: center;
       align-items: center;
     }
@@ -53,6 +52,8 @@
   
       #target-ruleta-container {
         width: 80%;
+        justify-content: center;
+      align-items: center;
       }
     }
   

@@ -91,8 +91,7 @@ function Ruleta() {
                         <span id="groupBadge" className="badge badge-light">{category}</span>
                     </div>
                     <div id="foodContainer" className="col-12 col-md-6 d-flex flex-wrap justify-content-center">
-                        <div id="carne" className="draggable" foodGroup="Alimentos de Origen Animal" draggable="true" onDragStart={(e) => handleDragStart(e, 'carne')} style={{ backgroundImage: `url(/assets/Ruleta/alimentosdeorigenanimal/carne.png)` }}></div>
-                        <div id="carne" className="draggable float fadeout" foodGroup="Alimentos de Origen Animal" draggable="true" onDragStart={(e) => handleDragStart(e, 'carne')} style={{ backgroundImage: `url(/assets/Ruleta/alimentosdeorigenanimal/carne.png)` }}></div>
+                    <div id="carne" className="draggable float fadeout" foodGroup="Alimentos de Origen Animal" draggable="true" onDragStart={(e) => handleDragStart(e, 'carne')} style={{ backgroundImage: `url(/assets/Ruleta/alimentosdeorigenanimal/carne.png)` }}></div>
                         <div id="cheedar" className="draggable float" foodGroup="Alimentos de Origen Animal" draggable="true" onDragStart={(e) => handleDragStart(e, 'cheedar')} style={{ backgroundImage: `url(/assets/Ruleta/alimentosdeorigenanimal/cheedar.png)` }}></div>
                         <div id="filete" className="draggable float" foodGroup="Alimentos de Origen Animal" draggable="true" onDragStart={(e) => handleDragStart(e, 'filete')} style={{ backgroundImage: `url(/assets/Ruleta/alimentosdeorigenanimal/filete.png)` }}></div>
                         <div id="huevo" className="draggable float" foodGroup="Alimentos de Origen Animal" draggable="true" onDragStart={(e) => handleDragStart(e, 'huevo')} style={{ backgroundImage: `url(/assets/Ruleta/alimentosdeorigenanimal/huevo.png)` }}></div>
@@ -122,7 +121,6 @@ function Ruleta() {
                         <div id="zanahoria" className="draggable float" foodGroup="Verduras" draggable="true" onDragStart={(e) => handleDragStart(e, 'zanahoria')} style={{ backgroundImage: `url(/assets/Ruleta/frutasyverduras/zanahoria.png)` }}></div>                    
                         <div id="acite" className="draggable float" foodGroup="Leguminosas" draggable="true" onDragStart={(e) => handleDragStart(e, 'acite')} style={{ backgroundImage: `url(/assets/Ruleta/leguminosas/aceite.png)` }}></div>
                     <div id="legumbres" className="draggable float" foodGroup="Leguminosas" draggable="true" onDragStart={(e) => handleDragStart(e, 'legumbres')} style={{ backgroundImage: `url(/assets/Ruleta/leguminosas/legumbres.png)` }}></div>
-                    <div id="carne" className="draggable" foodGroup="Alimentos de Origen Animal" draggable="true" onDragStart={(e) => handleDragStart(e, 'carne')} style={{ backgroundImage: `url(/assets/Ruleta/alimentosdeorigenanimal/carne.png)` }}></div>
                     </div>
                     </div>
                     <div id="target-ruleta-container" className="col-12 col-md-4 text-center" 
