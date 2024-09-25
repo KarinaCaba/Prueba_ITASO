@@ -77,6 +77,17 @@ function Ruleta() {
 
     return (
         <div className="Ruleta">
+            <div className="instructions">
+                <h4>Instrucciones para Jugar</h4>
+                <ol>
+                    <li>Haz clic en la ruleta superior para hacerla girar.</li>
+                    <li>Observa la categoría seleccionada por la zanahoria.</li>
+                    <li>Arrastra el ícono del alimento correspondiente a la categoría, al plato del buen comer que se encuentra en la parte inferior.</li>
+                    <li>Suéltalo en el área correspondiente.</li>
+                    <li>¡Repite el proceso hasta llenar el plato del buen comer!</li>
+                </ol>
+            </div>
+            
             <div className="container-fluid">
                 <div className="row">
                     <div className="container col-12 col-md-6 text-center">

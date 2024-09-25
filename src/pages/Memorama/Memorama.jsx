@@ -7,7 +7,9 @@ const Memorama = () => {
   const [icons, setIcons] = useState([]);
   const [selections, setSelections] = useState([]);
   const [board, setBoard] = useState([]);
-  const cardCount = 20; 
+  const [level, setLevel] = useState(null);
+  const [showMenu, setShowMenu] = useState(true);
+  const [showPopup, setShowPopup] = useState(false);
     
   useEffect(() => {
     loadIcons();
@@ -28,7 +30,6 @@ const Memorama = () => {
           )
         );
       } else {
-
         setTimeout(() => {
           setBoard(prevBoard =>
             prevBoard.map(card =>
@@ -43,6 +44,12 @@ const Memorama = () => {
     }
   }, [selections, board]);
 
+  useEffect(() => {
+    if (board.length && board.every(card => card.matched)) {
+      setShowPopup(true);
+    }
+  }, [board]);
+
   const loadIcons = () => {
     const newIcons = Array.from({ length: 54 }, (_, index) => (
       <img src={`/assets/memorama/cartas/${index + 1}.png`} alt={`icon ${index + 1}`} />
@@ -51,16 +58,18 @@ const Memorama = () => {
   };
 
   const generateBoard = (level) => {
+    setLevel(level);
+    setShowMenu(false);
     let nums = [];
     if (level === 'l1') {
       nums = [2, 3, 5, 7, 11, 12, 13, 14, 16, 17, 19, 23, 24];
     } else if (level === 'l2') {
       nums = [0, 1, 4, 6, 8, 9, 10, 15, 18, 20, 21, 22, 25, 26];
     } else {
-      nums = [...Array(27).keys()]; 
+      nums = [...Array(27).keys()];
     }
 
-    const shuffledNums = shuffle(nums.concat(nums)); 
+    const shuffledNums = shuffle(nums.concat(nums));
     const newBoard = shuffledNums.map((num, index) => ({
       id: index + 1,
       iconIndex: num,
@@ -97,30 +106,74 @@ const Memorama = () => {
     setSelections([...selections, cardId]);
   };
 
+  const handleNextLevel = () => {
+    setShowPopup(false);
+    if (level === 'l1') {
+      generateBoard('l2');
+    } else if (level === 'l2') {
+      generateBoard('l3');
+    }
+  };
+
+  const handleReturnToMenu = () => {
+    setShowPopup(false);
+    setShowMenu(true);
+  };
+
   return (
     <div>
-      <div className="board"> 
-        {board.map(card => (
-          <div
-            className="card" 
-            key={card.id}
-            onClick={() => selectCard(card.id)}
-            style={{ transform: card.flipped ? 'rotateY(180deg)' : 'rotateY(0deg)' }}
-          >
-            <div className="side rear" id={`rear${card.id}`}> 
-              {card.flipped || card.matched ? icons[card.iconIndex] : null}
+      {showMenu ? (
+        <div className="main-menu">
+          <h1>Memorama</h1>
+          <h3>¡Bienvenido a Memorama, un emocionante juego de memoria que desafiará tus habilidades mentales mientras aprendes sobre el contenido de azúcar en bebidas comerciales cotidianas!</h3>
+          <div className="level-options">
+            <div className="level-card" onClick={() => generateBoard('l1')}>
+              <h4>Nivel 1</h4>
             </div>
-            <div className="side front"> 
-              <img src="/assets/memorama/cartas/REVERSO.png" alt="card back" />
+            <div className="level-card" onClick={() => generateBoard('l2')}>
+              <h4>Nivel 2</h4>
+            </div>
+            <div className="level-card" onClick={() => generateBoard('l3')}>
+              <h4>Nivel 3</h4>
             </div>
           </div>
-        ))}
-      </div>
-      <div className="flex-container">
-        <div className="newgame-button" onClick={() => generateBoard('l1')}>Nivel 1</div>
-        <div className="newgame-button" onClick={() => generateBoard('l2')}>Nivel 2</div>
-        <div className="newgame-button" onClick={() => generateBoard('l3')}>Nivel 3</div>
-      </div>
+        </div>
+      ) : (
+        <>
+          <div className="level-info">
+            <h2>Nivel {level[1]}</h2>
+            <button className="return-button" onClick={handleReturnToMenu}>Regresar al Menú</button>
+          </div>
+          <div className="board">
+            {board.map(card => (
+              <div
+                className="card"
+                key={card.id}
+                onClick={() => selectCard(card.id)}
+                style={{ transform: card.flipped ? 'rotateY(180deg)' : 'rotateY(0deg)' }}
+              >
+                <div className="side rear">
+                  {card.flipped || card.matched ? icons[card.iconIndex] : null}
+                </div>
+                <div className="side front">
+                  <img src="/assets/memorama/cartas/REVERSO.png" alt="card back" />
+                </div>
+              </div>
+            ))}
+          </div>
+          {showPopup && (
+            <div className="popup">
+              <div className="popup-content">
+                <h2>¡Has ganado!</h2>
+                <div className="popup-buttons">
+                  <div className="nextlevel-button" onClick={handleNextLevel}>Siguiente Nivel</div>
+                  <div className="newgame-button" onClick={handleReturnToMenu}>Volver a Selección de Niveles</div>
+                </div>
+              </div>
+            </div>
+          )}
+        </>
+      )}
     </div>
   );
 };

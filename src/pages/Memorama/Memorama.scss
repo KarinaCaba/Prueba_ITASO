@@ -1,6 +1,6 @@
 :root {
-  --w: 114.33px;
-  --h: 146.8px;
+  --w: 75px;
+  --h: 100px;
 }
 
 body {
@@ -8,9 +8,100 @@ body {
   padding: 0;
   display: flex;
   flex-direction: column;
-  align-items: center;
   min-height: 100vh;
   font-family: 'Calibri', sans-serif;
+}
+
+.main-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(120deg, #ff7f50, #ff6347);
+}
+
+.main-menu h1 {
+  color: #fff;
+  font-size: 4rem;
+  margin-bottom: 70px;
+}
+
+.main-menu h3 {
+  color: #fff;
+  font-size: 2rem;
+  margin-bottom: 70px;
+}
+
+.main-menu button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 15px 30px;
+  font-size: 18px;
+  text-align: center;
+  border-radius: 10px;
+  margin: 10px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  width: 50%;
+}
+
+.main-menu {
+  background: linear-gradient(120deg, #ff7f50, #ff6347);
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.level-options {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+  padding: 0 10px;
+}
+
+.level-card {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  width: calc(30% - 20px);
+  max-width: 150px;
+  flex: 1 1 calc(30% - 20px);
+}
+
+.level-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.level-card h4 {
+  margin: 10px 0;
+  font-size: 1.5rem;
+}
+
+.level-card img {
+  width: 100px;
+  height: 100px;
+}
+
+@media (max-width: 768px) {
+  .level-card {
+    width: calc(45% - 20px);
+  }
+}
+
+@media (max-width: 480px) {
+  .level-card {
+    width: calc(100% - 20px);
+  }
 }
 
 .board {
@@ -19,16 +110,16 @@ body {
   justify-content: center;
   gap: 10px;
   padding: 20px;
-  perspective: 1000px; 
-  margin:auto
+  perspective: 1000px;
+  margin: auto;
 }
 
 .card {
   width: var(--w);
   height: var(--h);
   position: relative;
-  transform-style: preserve-3d; 
-  transition: transform 0.6s; 
+  transform-style: preserve-3d;
+  transition: transform 0.4s;
   cursor: pointer;
 }
 
@@ -36,26 +127,25 @@ body {
   position: absolute;
   width: 100%;
   height: 100%;
-  backface-visibility: hidden; 
+  backface-visibility: hidden;
 }
 
 .front {
-  transform: rotateY(0deg); 
+  transform: rotateY(0deg);
 }
 
 .rear {
-  transform: rotateY(180deg); 
+  transform: rotateY(180deg);
 }
 
 .card.flipped {
-  transform: rotateY(180deg); 
+  transform: rotateY(180deg);
 }
-
 
 .front img, .rear img {
   width: 100%;
   height: 100%;
-  object-fit: cover; 
+  object-fit: cover;
 }
 
 .newgame-button {
@@ -64,7 +154,6 @@ body {
   padding: 15px 30px;
   font-size: 18px;
   text-align: center;
-  text-decoration: none;
   border-radius: 10px;
   cursor: pointer;
   margin: 10px;
@@ -77,43 +166,104 @@ body {
   background-color: #45a049;
 }
 
-.newgame-button:focus {
-  outline: 3px solid #333;
-  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.2);
+.nextlevel-button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 15px 30px;
+  font-size: 18px;
+  text-align: center;
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 10px;
+  border: none;
+  outline: none;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.nextlevel-button:hover {
+  background-color: #45a049;
+}
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  z-index: 999;
+}
+
+.popup h2 {
+  margin-bottom: 20px;
+}
+
+.popup button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+}
+
+.level-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+
+}
+
+.return-button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.return-button:hover {
+  background-color: #45a049;
 }
 
 @media screen and (min-width: 768px) {
   :root {
-    --w: calc(114.33px * 1.5);
-    --h: calc(146.8px * 1.5);
+    --w: calc(75px * 1.5);
+    --h: calc(100px * 1.5);
   }
 }
 
 @media screen and (min-width: 992px) {
   :root {
-    --w: calc(114.33px * 2);
-    --h: calc(146.8px * 2);
+    --w: calc(75px * 2);
+    --h: calc(100px * 2);
   }
 }
 
 @media screen and (min-width: 1200px) {
   :root {
-    --w: calc(114.33px * 2.5);
-    --h: calc(146.8px * 2.5);
+    --w: calc(75px * 2.5);
+    --h: calc(100px * 2.5);
   }
 }
 
 @media screen and (max-width: 767px) {
   :root {
-    --w: calc(114.33px * 1);
-    --h: calc(146.8px * 1);
+    --w: calc(75px * 0.8);
+    --h: calc(100px * 0.8);
   }
 }
-
-.flex-container {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  padding: 40px 0;
-}
-
