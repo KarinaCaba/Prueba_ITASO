@@ -15,6 +15,7 @@ import Calculator from "./pages/Calculator/Calculator";
 import Contador from "./pages/Calculator/Contador/Contador";
 import Memorama from "./pages/Memorama/Memorama"
 import Ruleta from "./pages/Ruleta/Ruleta"
+import Juanito from "./pages/Juanito/Juanito";
 
 const Layout = () => {
   return (
@@ -77,6 +78,10 @@ const router = createBrowserRouter([
       }, {
         path: "ruleta",
         element: <Ruleta/>,
+      },
+      {
+        path: "juanito",
+        element:<Juanito/>
       },
     ],
 

@@ -15,6 +15,7 @@ const Calculator = () => {
   const [edadvalida, setEdadvalida] = useState(true);
   const navigate = useNavigate();
   
+  
   const handleSubmit = (event) => {
     event.preventDefault();
     navigate("/calculator/contador", {

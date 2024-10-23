@@ -1,0 +1,193 @@
+.juanito-container {
+    text-align: center;
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 1200px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+  }
+  
+  .juanito-status {
+    margin: 30px 0;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+  
+  .juanito-container-delimited {
+    width: 200px; /* Ancho fijo para las imágenes */
+    height: 250px; /* Alto fijo para las imágenes */
+    margin: 0 auto 20px auto; /* Centrar el contenedor */
+    overflow: hidden; /* Para evitar que la imagen se salga */
+    position: relative;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .juanito-container-delimited img {
+    width: 100%; /* Ajusta al ancho del contenedor */
+    height: auto; /* Mantiene la proporción original */
+    max-height: 100%; /* No permite que la imagen exceda la altura del contenedor */
+    object-fit: contain; /* Asegura que la imagen se mantenga dentro de los límites sin deformarse */
+  }
+  
+  .juanito img {
+    transition: transform 0.3s ease, filter 0.3s ease;
+  }
+  
+  .juanito img.subir {
+    transform: scale(1.2);
+    filter: brightness(1.1);
+  }
+  
+  .juanito img.bajar {
+    transform: scale(0.8);
+    filter: brightness(0.9);
+  }
+  
+  .progress-bar {
+    width: 100%;
+    background-color: #f3f3f3;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 20px 0;
+    position: relative; /* Asegura que la barra verde esté contenida */
+  }
+  
+  .progress {
+    height: 20px;
+    background-color: #5cb85c; /* Color verde para la barra de progreso */
+    color: white;
+    text-align: center;
+    line-height: 20px;
+    transition: width 0.4s ease;
+    border-radius: 10px;
+    min-width: 10%; /* Asegura que la barra siempre sea visible aunque el progreso sea pequeño */
+  }
+  
+  .alimentos-habitos {
+    display: grid;
+    grid-template-columns: 1fr 1fr 50px 1fr 1fr; /* Dos columnas para alimentos, una columna vacía y dos columnas para hábitos */
+    grid-gap: 20px;
+    align-items: start;
+    margin: 30px auto;
+    padding: 20px;
+    max-width: 1200px;
+  }
+  
+  .comida-chatarra,
+  .comida-saludable {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .malos-habitos,
+  .buenos-habitos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .habitos ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 20px;
+  }
+  
+  .habitos li {
+    font-size: 1.2rem;
+    margin: 5px 0;
+  }
+  
+  .buen-habito {
+    color: #4caf50;
+    background-color: #e8f5e9;
+    padding: 5px;
+    border-radius: 5px;
+  }
+  
+  .mal-habito {
+    color: #f44336;
+    background-color: #ffebee;
+    padding: 5px;
+    border-radius: 5px;
+  }
+  
+  .img-alimento {
+    width: 120px; /* Tamaño adecuado para las imágenes */
+    height: auto;
+    cursor: grab;
+    margin: 10px;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .img-alimento:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Estilos para la pantalla de instrucciones */
+  .instrucciones-container {
+    background-color: #f9f9f9;
+    padding: 30px;
+    max-width: 600px;
+    margin: 40px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .boton-iniciar {
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .boton-iniciar:hover {
+    background-color: #4cae4c;
+  }
+  
+  /* Estilos para la pantalla final (ganar/perder) */
+  .estado-final-container {
+    background-color: #f9f9f9;
+    padding: 40px;
+    max-width: 600px;
+    margin: 40px auto;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .boton-reiniciar {
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .boton-reiniciar:hover {
+    background-color: #c9302c;
+  }
+  
+  @media (max-width: 768px) {
+    .alimentos-habitos {
+      grid-template-columns: 1fr; /* En pantallas pequeñas, una sola columna */
+      grid-gap: 20px;
+    }
+  }
+  

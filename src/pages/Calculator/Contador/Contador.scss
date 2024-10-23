@@ -56,6 +56,7 @@
 
 */
 
+/*
 .contador {
 	padding-top: 3em;
 	text-align: center;
@@ -148,9 +149,9 @@
   
   
 
-	/*A partir de aquí es el resultado */
+	
 	.result {
-		/*Aún no se quita la cuchara*/
+		
 		.cuchara {
 		  width: 90%;
 		  height: 15rem;
@@ -191,4 +192,138 @@
 		  display: inline-block; // Ajustar al tamaño del texto
 		}
 	  }
-	}
+	}*/
+	.contador {
+		min-height: 100vh; // Ocupa el 100% del alto de la ventana
+		display: flex;
+		flex-direction: column;
+		justify-content: center; // Centramos verticalmente
+		align-items: center; // Centramos horizontalmente
+		text-align: center;
+		
+		.display {
+		  background-color: #f6f6f6;
+		  margin: 0 auto;
+		  max-width: 1200px;
+		  padding: 2rem;
+		  border-radius: 10px; // Bordes redondeados para el contenedor
+	  
+		  @media screen and (max-width: 768px) {
+			padding: 0rem 1rem 3rem 1rem !important;
+		  }
+	  
+		  .cards {
+			display: flex;
+			flex-wrap: wrap; // Distribuimos en varias filas
+			justify-content: center;
+			gap: 1.5rem;
+			background-color: transparent !important;
+	  
+			.card {
+			  border: 0;
+			  background: #f6f6f6;
+			  flex: 1 0 20%;
+			  max-width: 12rem;
+			  padding: 1rem;
+			  text-align: center;
+	  
+			  @media screen and (max-width: 1200px) {
+				flex: 1 0 30%;
+			  }
+	  
+			  @media screen and (max-width: 768px) {
+				flex: 1 0 45%;
+			  }
+	  
+			  @media screen and (max-width: 600px) {
+				flex: 1 0 100%; // En pantallas pequeñas, las tarjetas ocupan todo el ancho
+			  }
+	  
+			  img {
+				width: 100%;
+				height: 10rem;
+				object-fit: scale-down;
+				background-color: transparent !important;
+			  }
+	  
+			  .btn-group {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				gap: 0.5rem;
+				margin-top: 0.5rem;
+	  
+				button {
+				  width: 2.5rem;
+				  height: 2.5rem;
+				  border: none;
+				  font-size: 1.2rem;
+				  margin: 0.2rem;
+				  display: flex;
+				  justify-content: center;
+				  align-items: center;
+	  
+				  &:nth-child(1) {
+					background-color: #00bfff;
+				  }
+	  
+				  &:nth-child(2) {
+					background-color: #ff6347;
+				  }
+	  
+				  &:nth-child(3) {
+					background-color: #ffeb3b;
+				  }
+	  
+				  i {
+					color: #fff;
+				  }
+				}
+			  }
+			}
+		  }
+		}
+	  
+		.result {
+		  .cuchara {
+			width: 90%;
+			height: 15rem;
+			object-fit: scale-down;
+			background-color: transparent !important;
+		  }
+	  
+		  .text-result {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: auto;
+			width: 80%;
+			font-size: 2rem;
+			margin: 0 auto;
+			text-align: center;
+		  }
+	  
+		  .sugar-result {
+			font-size: 9rem;
+			color: #00bfff;
+		  }
+	  
+		  .sugar-text {
+			font-size: 6rem;
+			color: #00bfff;
+			margin-top: -90px;
+			margin-left: 10px;
+		  }
+	  
+		  .healthy-message {
+			color: #f6f6f6;
+			background-color: #80cfa6;
+			border-radius: 0.5rem;
+			padding: 1rem;
+			margin-top: 2rem;
+			font-size: 1.5rem;
+			display: inline-block;
+		  }
+		}
+	  }
+	  

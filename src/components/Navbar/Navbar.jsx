@@ -93,6 +93,16 @@ function Navbar1() {
                       Memorama
                     </NavDropdown.Item>
 
+                     {/* Nueva opción añadida para "Juanito" */}
+                     <NavDropdown.Item
+                      eventkey={5}
+                      as={Link}
+                      onClick={handleClose}
+                      to={"/juanito"}
+                    >
+                      Juanito
+                    </NavDropdown.Item>
+
                     <NavDropdown.Item
                       eventkey={1}
                       as={Link}
