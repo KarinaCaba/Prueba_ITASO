@@ -1,0 +1,20 @@
+body {
+  background-color: white;
+}
+body .bg_img {
+  background: url("../../../public/assets/backgrounds/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+body .logo-img {
+  max-width: 100%;
+  display: block;
+  width: 8.4rem;
+}
+@media screen and (max-width: 768px) {
+  body .login {
+    margin: 1rem 0 3rem 0 !important;
+    padding-top: 0;
+    width: 100% !important;
+  }
+}/*# sourceMappingURL=Login.css.map */

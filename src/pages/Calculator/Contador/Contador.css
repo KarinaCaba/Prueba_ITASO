@@ -1,0 +1,179 @@
+@charset "UTF-8";
+/*.contador {
+	padding-top: 3em;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	.display {
+		background-color: #f6f6f6;
+		margin: 0rem 10rem !important;
+		@media screen and (max-width: 768px) {
+			padding: 0rem 0rem 3rem 0rem !important;
+			margin: 0rem !important;
+			border-radius: 0 0 0.5% 0.5% !important;
+			.cards {
+				gap: 1.2rem !important;
+				justify-content: center !important;
+			}
+		}
+		.cards {
+			display: flex !important;
+			flex-wrap: wrap;
+			justify-content: center;
+			gap: 1.5rem;
+			background-color: transparent important;
+			.card-fill {
+				display: none !important;
+				img {
+					padding-top: 6rem;
+				}
+				@media screen and (max-width: 767px) {
+					display: block !important;
+				}
+			}
+			.card {
+				border: 0;
+				background: #f6f6f6;
+
+				flex: 0 0 11rem;
+				@media screen and (max-width: 600px) {
+					flex: 9rem;
+				}
+				img {
+					width: 100%;
+					height: 15rem;
+					object-fit: scale-down;
+					background-color: transparent important;
+				}
+				.btn-group {
+					background-color: transparent important;
+					display: flex !important;
+					justify-content: center !important;
+					align-self: center !important;
+				}
+			}
+		}
+	}
+
+*/
+.contador {
+  padding-top: 3em;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  /*A partir de aquí es el resultado */
+}
+.contador .display {
+  background-color: #f6f6f6;
+  margin: 0rem 10rem !important;
+}
+@media screen and (max-width: 768px) {
+  .contador .display {
+    padding: 0rem 0rem 3rem 0rem !important;
+    margin: 0rem !important;
+    border-radius: 0 0 0.5% 0.5% !important;
+  }
+  .contador .display .cards {
+    gap: 1.2rem !important;
+    justify-content: center !important;
+  }
+}
+.contador .display .cards {
+  display: flex !important;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  background-color: transparent important;
+}
+.contador .display .cards .card-fill {
+  display: none !important;
+}
+.contador .display .cards .card-fill img {
+  padding-top: 6rem;
+}
+@media screen and (max-width: 767px) {
+  .contador .display .cards .card-fill {
+    display: block !important;
+  }
+}
+.contador .display .cards .card {
+  border: 0;
+  background: #f6f6f6;
+  flex: 0 0 11rem;
+}
+@media screen and (max-width: 600px) {
+  .contador .display .cards .card {
+    flex: 9rem;
+  }
+}
+.contador .display .cards .card img {
+  width: 100%;
+  height: 15rem;
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
+  background-color: transparent important;
+}
+.contador .display .cards .card .btn-group {
+  background-color: transparent important;
+  display: flex !important;
+  justify-content: center !important;
+  align-self: center !important;
+}
+.contador .display .cards .card .btn-group button {
+  width: 2.5rem;
+  height: 2.5rem;
+  border: none;
+  font-size: 1.2rem;
+  margin: 0.2rem;
+}
+.contador .display .cards .card .btn-group button:nth-child(1) {
+  background-color: #00bfff;
+}
+.contador .display .cards .card .btn-group button:nth-child(2) {
+  background-color: #ff6347;
+}
+.contador .display .cards .card .btn-group button:nth-child(3) {
+  background-color: #ffeb3b;
+}
+.contador .display .cards .card .btn-group button i {
+  color: #fff;
+}
+.contador .result {
+  /*Aún no se quita la cuchara*/
+}
+.contador .result .cuchara {
+  width: 90%;
+  height: 15rem;
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
+  background-color: transparent !important;
+}
+.contador .result .text-result {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  width: 80%;
+  font-size: 2rem;
+  margin: 0 auto;
+  text-align: center;
+}
+.contador .result .sugar-result {
+  font-size: 9rem;
+  color: #00bfff;
+}
+.contador .result .sugar-text {
+  font-size: 6rem;
+  color: #00bfff;
+  margin-top: -90px;
+  margin-left: 10px;
+}
+.contador .result .healthy-message {
+  color: #f6f6f6;
+  background-color: #80cfa6;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  display: inline-block;
+}/*# sourceMappingURL=Contador.css.map */
